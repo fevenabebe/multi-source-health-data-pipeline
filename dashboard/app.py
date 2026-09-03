@@ -3,26 +3,18 @@ dashboard/app.py
 -----------------
 Streamlit dashboard for the Multi-Source Health Data Integration Pipeline.
 
-Data flow (important — read this before changing anything):
-    PostgreSQL  --(SQL query)-->  pandas DataFrame  --(st.dataframe/plotly)-->  browser
+The ETL pipeline cleans and prepares the data in data/bi/.
+The online Streamlit dashboard reads those BI-ready outputs directly,
+making the demo deployable without a PostgreSQL server.
 
-    The dashboard NEVER reads data/raw/*.csv directly. Every number shown
-    here comes from a SQL query against the tables/views that src/load.py
-    created. This is deliberate: it proves the ETL pipeline is the single
-    source of truth for the dashboard, the same way a real BI tool
-    (Metabase, Looker, PowerBI) sits on top of a warehouse rather than
-    re-reading a department's original spreadsheets.
-
-Run locally:
-    streamlit run dashboard/app.py
-Run in Docker:
-    started automatically by docker-compose (see docker-compose.yml)
+PostgreSQL remains part of the project's production-oriented ETL architecture.
 """
 
-import os
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
-from sqlalchemy import create_engine
+
 
 st.set_page_config(
     page_title="Multi-Source Health Data Pipeline",
@@ -31,135 +23,326 @@ st.set_page_config(
 )
 
 
-@st.cache_resource
-def get_engine():
-    host = os.environ.get("DB_HOST", "localhost")
-    port = os.environ.get("DB_PORT", "5432")
-    name = os.environ.get("DB_NAME", "health_pipeline")
-    user = os.environ.get("DB_USER", "postgres")
-    password = os.environ.get("DB_PASSWORD", "postgres")
-    url = f"postgresql+psycopg2://{user}:{password}@{host}:{port}/{name}"
-    return create_engine(url)
-
-
-@st.cache_data(ttl=60)
-def run_query(sql: str) -> pd.DataFrame:
-    return pd.read_sql(sql, get_engine())
-
-
-st.title("🏥 Multi-Source Health Data Integration Pipeline")
-st.caption(
-    "A small, realistic ETL project demonstrating an end-to-end data "
-    "engineering workflow — not a big-data or enterprise-scale system. "
-    "All figures below are computed live from PostgreSQL, which was "
-    "populated by the pipeline in `src/pipeline.py`."
-)
-
 # ---------------------------------------------------------------------------
-# Guard: if the pipeline hasn't been run yet, tables won't exist. Fail
-# clearly instead of showing a confusing stack trace.
+# Data loading
 # ---------------------------------------------------------------------------
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+BI_DIR = BASE_DIR / "data" / "bi"
+
+
+@st.cache_data
+def load_data():
+    facilities = pd.read_csv(BI_DIR / "facilities_clean.csv")
+    patient_visits = pd.read_csv(BI_DIR / "patient_visits_clean.csv")
+    disease_cases = pd.read_csv(BI_DIR / "disease_cases_clean.csv")
+    monthly_indicators = pd.read_csv(BI_DIR / "monthly_indicators_clean.csv")
+    visit_disease_summary = pd.read_csv(
+        BI_DIR / "visit_disease_summary_clean.csv"
+    )
+
+    return (
+        facilities,
+        patient_visits,
+        disease_cases,
+        monthly_indicators,
+        visit_disease_summary,
+    )
+
+
 try:
-    totals = run_query("""
-        SELECT
-            (SELECT COUNT(*) FROM facilities) AS total_facilities,
-            (SELECT COUNT(*) FROM patient_visits) AS total_visits,
-            (SELECT COUNT(*) FROM disease_cases) AS total_cases
-    """).iloc[0]
+    (
+        facilities,
+        patient_visits,
+        disease_cases,
+        monthly_indicators,
+        visit_disease_summary,
+    ) = load_data()
+
 except Exception as exc:
     st.error(
-        "Could not read from the database. Have you run the ETL pipeline "
-        "yet? Try `python src/pipeline.py` (or `docker compose up --build`)."
+        "Could not load the BI-ready datasets. "
+        "Make sure the files exist in `data/bi/`."
     )
     st.exception(exc)
     st.stop()
 
+
+# ---------------------------------------------------------------------------
+# Title
+# ---------------------------------------------------------------------------
+
+st.title("🏥 Multi-Source Health Data Integration Pipeline")
+
+st.caption(
+    "A small, realistic ETL project demonstrating an end-to-end data "
+    "engineering workflow — not a big-data or enterprise-scale system. "
+    "The dashboard uses cleaned BI-ready outputs produced by the ETL "
+    "transformation stage."
+)
+
+
 # ---------------------------------------------------------------------------
 # KPI row
 # ---------------------------------------------------------------------------
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Total Facilities", int(totals["total_facilities"]))
-col2.metric("Total Patient Visits", int(totals["total_visits"]))
-col3.metric("Total Disease Cases", int(totals["total_cases"]))
 
-latest_month = run_query("""
-    SELECT MAX(case_month) AS m FROM visit_disease_summary
-""")["m"].iloc[0]
-col4.metric("Latest Data Month", latest_month or "N/A")
+col1, col2, col3, col4 = st.columns(4)
+
+col1.metric(
+    "Total Facilities",
+    len(facilities),
+)
+
+col2.metric(
+    "Total Patient Visits",
+    len(patient_visits),
+)
+
+col3.metric(
+    "Total Disease Cases",
+    len(disease_cases),
+)
+
+if "case_month" in visit_disease_summary.columns:
+    latest_month = visit_disease_summary["case_month"].dropna().max()
+else:
+    latest_month = "N/A"
+
+col4.metric(
+    "Latest Data Month",
+    latest_month if pd.notna(latest_month) else "N/A",
+)
+
 
 st.divider()
 
+
 # ---------------------------------------------------------------------------
-# Trend over time
+# Monthly trends
 # ---------------------------------------------------------------------------
+
 st.subheader("Monthly Patient Visit Trend")
-visit_trend = run_query("SELECT * FROM view_monthly_visit_trend ORDER BY visit_month")
-st.line_chart(visit_trend.set_index("visit_month"))
+
+if "visit_date" in patient_visits.columns:
+    patient_visits["visit_month"] = pd.to_datetime(
+        patient_visits["visit_date"],
+        errors="coerce",
+    ).dt.to_period("M").astype(str)
+
+    visit_trend = (
+        patient_visits.dropna(subset=["visit_month"])
+        .groupby("visit_month")
+        .size()
+        .reset_index(name="visit_count")
+    )
+
+    visit_trend = visit_trend.sort_values("visit_month")
+
+    st.line_chart(
+        visit_trend.set_index("visit_month")["visit_count"]
+    )
+
 
 st.subheader("Monthly Disease Case Trend")
-case_trend = run_query("""
-    SELECT case_month, SUM(case_count) AS total_cases
-    FROM visit_disease_summary
-    GROUP BY case_month ORDER BY case_month
-""")
-st.line_chart(case_trend.set_index("case_month"))
+
+if {"case_month", "case_count"}.issubset(visit_disease_summary.columns):
+    case_trend = (
+        visit_disease_summary.groupby("case_month", as_index=False)[
+            "case_count"
+        ]
+        .sum()
+        .sort_values("case_month")
+    )
+
+    st.line_chart(
+        case_trend.set_index("case_month")["case_count"]
+    )
+
 
 st.divider()
+
 
 # ---------------------------------------------------------------------------
 # Regional + disease breakdowns
 # ---------------------------------------------------------------------------
+
 left, right = st.columns(2)
+
 
 with left:
     st.subheader("Visits by Region")
-    by_region = run_query("SELECT * FROM view_visits_by_region ORDER BY visit_count DESC")
-    st.bar_chart(by_region.set_index("region"))
+
+    if "region" in patient_visits.columns:
+        by_region = (
+            patient_visits.groupby("region")
+            .size()
+            .reset_index(name="visit_count")
+            .sort_values("visit_count", ascending=False)
+        )
+
+        st.bar_chart(
+            by_region.set_index("region")["visit_count"]
+        )
+
 
 with right:
     st.subheader("Cases by Disease")
-    by_disease = run_query("SELECT * FROM view_cases_by_disease ORDER BY case_count DESC")
-    st.bar_chart(by_disease.set_index("disease_name")["case_count"])
-    st.dataframe(by_disease, use_container_width=True, hide_index=True)
+
+    if {"disease_name", "case_count"}.issubset(
+        visit_disease_summary.columns
+    ):
+        by_disease = (
+            visit_disease_summary.groupby("disease_name", as_index=False)[
+                "case_count"
+            ]
+            .sum()
+            .sort_values("case_count", ascending=False)
+        )
+
+        st.bar_chart(
+            by_disease.set_index("disease_name")["case_count"]
+        )
+
+        st.dataframe(
+            by_disease,
+            use_container_width=True,
+            hide_index=True,
+        )
+
 
 st.divider()
+
 
 # ---------------------------------------------------------------------------
 # Top facilities + age breakdown
 # ---------------------------------------------------------------------------
+
 left2, right2 = st.columns(2)
+
 
 with left2:
     st.subheader("Top Facilities by Visit Count")
-    top_facilities = run_query("SELECT * FROM view_top_facilities LIMIT 10")
-    st.dataframe(top_facilities, use_container_width=True, hide_index=True)
+
+    if "facility_id" in patient_visits.columns:
+        top_facilities = (
+            patient_visits.groupby("facility_id")
+            .size()
+            .reset_index(name="visit_count")
+            .sort_values("visit_count", ascending=False)
+            .head(10)
+        )
+
+        if "facility_name" in facilities.columns:
+            top_facilities = top_facilities.merge(
+                facilities[["facility_id", "facility_name"]],
+                on="facility_id",
+                how="left",
+            )
+
+            top_facilities = top_facilities[
+                ["facility_id", "facility_name", "visit_count"]
+            ]
+
+        st.dataframe(
+            top_facilities,
+            use_container_width=True,
+            hide_index=True,
+        )
+
 
 with right2:
     st.subheader("Visits by Age Group")
-    age_breakdown = run_query("""
-        SELECT age_group, COUNT(*) AS visit_count
-        FROM patient_visits
-        WHERE age_group IS NOT NULL
-        GROUP BY age_group
-        ORDER BY age_group
-    """)
-    st.bar_chart(age_breakdown.set_index("age_group"))
+
+    if "age_group" in patient_visits.columns:
+        age_breakdown = (
+            patient_visits.dropna(subset=["age_group"])
+            .groupby("age_group")
+            .size()
+            .reset_index(name="visit_count")
+            .sort_values("age_group")
+        )
+
+        st.bar_chart(
+            age_breakdown.set_index("age_group")["visit_count"]
+        )
+
 
 st.divider()
 
+
 # ---------------------------------------------------------------------------
-# Raw indicator explorer
+# Monthly indicators
 # ---------------------------------------------------------------------------
-st.subheader("Monthly Indicators (latest value per region)")
-latest_indicators = run_query("""
-    SELECT DISTINCT ON (region, indicator_name)
-        region, indicator_name, month, indicator_value
-    FROM monthly_indicators
-    ORDER BY region, indicator_name, month DESC
-""")
-st.dataframe(latest_indicators, use_container_width=True, hide_index=True)
+
+st.subheader("Monthly Indicators — Latest Value per Region")
+
+if {"region", "indicator_name", "month", "indicator_value"}.issubset(
+    monthly_indicators.columns
+):
+
+    indicators = monthly_indicators.copy()
+
+    indicators["month"] = pd.to_datetime(
+        indicators["month"],
+        errors="coerce",
+    )
+
+    latest_indicators = (
+        indicators.sort_values("month")
+        .drop_duplicates(
+            subset=["region", "indicator_name"],
+            keep="last",
+        )
+        .sort_values(["region", "indicator_name"])
+    )
+
+    latest_indicators["month"] = (
+        latest_indicators["month"]
+        .dt.strftime("%Y-%m")
+    )
+
+    st.dataframe(
+        latest_indicators,
+        use_container_width=True,
+        hide_index=True,
+    )
+
+
+# ---------------------------------------------------------------------------
+# Data quality / pipeline summary
+# ---------------------------------------------------------------------------
+
+st.divider()
+
+st.subheader("Pipeline Output Summary")
+
+summary = pd.DataFrame(
+    {
+        "Dataset": [
+            "Facilities",
+            "Patient Visits",
+            "Disease Cases",
+            "Monthly Indicators",
+            "Visit-Disease Summary",
+        ],
+        "Rows": [
+            len(facilities),
+            len(patient_visits),
+            len(disease_cases),
+            len(monthly_indicators),
+            len(visit_disease_summary),
+        ],
+    }
+)
+
+st.dataframe(
+    summary,
+    use_container_width=True,
+    hide_index=True,
+)
+
 
 st.caption(
-    "Data source: synthetic CSV files generated by src/generate_data.py — "
-    "not real patient data."
+    "Data source: synthetic CSV files generated by "
+    "`src/generate_data.py` — not real patient data."
 )
