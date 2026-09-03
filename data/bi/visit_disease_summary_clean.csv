@@ -1,0 +1,253 @@
+case_month,region,disease_name,case_count
+2024-01,Amhara,Hypertension,1
+2024-01,Amhara,Malaria,1
+2024-01,Amhara,Malnutrition,1
+2024-01,Amhara,Tuberculosis,2
+2024-01,Oromia,Diabetes,1
+2024-01,Oromia,Diarrheal Disease,3
+2024-01,Oromia,Malaria,1
+2024-01,Somali,Hypertension,1
+2024-01,Somali,Malaria,1
+2024-01,Tigray,Tuberculosis,1
+2024-02,Amhara,Diarrheal Disease,2
+2024-02,Oromia,Diabetes,1
+2024-02,Oromia,Hypertension,1
+2024-02,Oromia,Malaria,1
+2024-02,Oromia,Malnutrition,1
+2024-02,Somali,Diabetes,2
+2024-02,Somali,Pneumonia,1
+2024-02,Tigray,Malaria,1
+2024-02,Tigray,Tuberculosis,1
+2024-03,Amhara,Diabetes,1
+2024-03,Amhara,Diarrheal Disease,1
+2024-03,Amhara,Malaria,1
+2024-03,Oromia,Hypertension,1
+2024-03,Oromia,Pneumonia,1
+2024-03,Somali,Diabetes,1
+2024-03,Somali,Hypertension,1
+2024-03,Tigray,Diarrheal Disease,1
+2024-03,Tigray,Pneumonia,1
+2024-04,Addis Ababa,Malnutrition,1
+2024-04,Addis Ababa,Pneumonia,1
+2024-04,Amhara,Hypertension,2
+2024-04,Amhara,Tuberculosis,1
+2024-04,Oromia,Malaria,1
+2024-04,Somali,Diabetes,2
+2024-04,Somali,Hypertension,1
+2024-04,Somali,Malaria,1
+2024-04,Somali,Pneumonia,1
+2024-04,Tigray,Malnutrition,1
+2024-04,Tigray,Tuberculosis,1
+2024-05,Addis Ababa,Diarrheal Disease,1
+2024-05,Addis Ababa,Hypertension,1
+2024-05,Amhara,Hypertension,1
+2024-05,Amhara,Pneumonia,1
+2024-05,Amhara,Tuberculosis,1
+2024-05,Oromia,Diarrheal Disease,1
+2024-05,Oromia,Malnutrition,1
+2024-05,Oromia,Pneumonia,1
+2024-05,Somali,Diabetes,1
+2024-05,Somali,Malnutrition,1
+2024-05,Somali,Pneumonia,2
+2024-06,Amhara,Diabetes,1
+2024-06,Amhara,Diarrheal Disease,1
+2024-06,Amhara,Hypertension,1
+2024-06,Amhara,Malaria,2
+2024-06,Amhara,Tuberculosis,1
+2024-06,Oromia,Malaria,1
+2024-06,Somali,Hypertension,1
+2024-06,Somali,Pneumonia,1
+2024-06,Somali,Tuberculosis,1
+2024-06,Tigray,Diarrheal Disease,1
+2024-06,Tigray,Malnutrition,2
+2024-06,Tigray,Pneumonia,1
+2024-07,Addis Ababa,Diarrheal Disease,1
+2024-07,Oromia,Hypertension,1
+2024-07,Oromia,Malnutrition,1
+2024-07,Somali,Diarrheal Disease,1
+2024-07,Somali,Hypertension,1
+2024-07,Somali,Pneumonia,1
+2024-07,Tigray,Hypertension,1
+2024-07,Tigray,Malaria,1
+2024-07,Tigray,Pneumonia,1
+2024-08,Amhara,Diarrheal Disease,1
+2024-08,Amhara,Pneumonia,1
+2024-08,Oromia,Hypertension,1
+2024-08,Oromia,Malaria,1
+2024-08,Oromia,Pneumonia,2
+2024-08,Oromia,Tuberculosis,1
+2024-08,Somali,Diabetes,2
+2024-08,Somali,Diarrheal Disease,1
+2024-08,Somali,Hypertension,1
+2024-08,Somali,Malnutrition,2
+2024-08,Tigray,Diabetes,2
+2024-09,Addis Ababa,Tuberculosis,1
+2024-09,Amhara,Diabetes,1
+2024-09,Amhara,Hypertension,1
+2024-09,Oromia,Diabetes,2
+2024-09,Oromia,Hypertension,1
+2024-09,Oromia,Pneumonia,1
+2024-09,Oromia,Tuberculosis,1
+2024-09,Somali,Diabetes,1
+2024-09,Somali,Hypertension,2
+2024-09,Somali,Malaria,1
+2024-09,Somali,Malnutrition,2
+2024-09,Somali,Pneumonia,2
+2024-09,Tigray,Diabetes,2
+2024-09,Tigray,Malnutrition,1
+2024-10,Amhara,Tuberculosis,1
+2024-10,Oromia,Pneumonia,1
+2024-10,Somali,Hypertension,1
+2024-10,Tigray,Diabetes,1
+2024-10,Tigray,Hypertension,2
+2024-10,Tigray,Tuberculosis,1
+2024-11,Addis Ababa,Diarrheal Disease,1
+2024-11,Amhara,Malaria,1
+2024-11,Amhara,Tuberculosis,1
+2024-11,Oromia,Diarrheal Disease,1
+2024-11,Oromia,Hypertension,1
+2024-11,Oromia,Tuberculosis,1
+2024-11,Somali,Pneumonia,3
+2024-11,Tigray,Diarrheal Disease,1
+2024-11,Tigray,Pneumonia,1
+2024-12,Addis Ababa,Diabetes,1
+2024-12,Amhara,Hypertension,1
+2024-12,Oromia,Malaria,2
+2024-12,Oromia,Pneumonia,2
+2024-12,Somali,Malaria,1
+2024-12,Tigray,Diarrheal Disease,1
+2024-12,Tigray,Malaria,1
+2024-12,Tigray,Pneumonia,1
+2025-01,Amhara,Tuberculosis,1
+2025-01,Oromia,Diarrheal Disease,1
+2025-01,Oromia,Hypertension,1
+2025-01,Oromia,Malaria,1
+2025-01,Oromia,Malnutrition,2
+2025-01,Oromia,Pneumonia,1
+2025-01,Somali,Diabetes,1
+2025-01,Somali,Malaria,1
+2025-01,Somali,Pneumonia,1
+2025-01,Tigray,Malnutrition,1
+2025-01,Tigray,Pneumonia,1
+2025-01,Tigray,Tuberculosis,1
+2025-02,Addis Ababa,Malaria,1
+2025-02,Addis Ababa,Tuberculosis,1
+2025-02,Amhara,Diarrheal Disease,2
+2025-02,Amhara,Malaria,1
+2025-02,Amhara,Malnutrition,1
+2025-02,Oromia,Hypertension,1
+2025-02,Oromia,Pneumonia,1
+2025-02,Oromia,Tuberculosis,1
+2025-02,Somali,Hypertension,1
+2025-02,Somali,Pneumonia,1
+2025-02,Somali,Tuberculosis,1
+2025-02,Tigray,Diabetes,1
+2025-02,Tigray,Diarrheal Disease,1
+2025-02,Tigray,Malnutrition,1
+2025-02,Tigray,Pneumonia,1
+2025-02,Tigray,Tuberculosis,1
+2025-03,Amhara,Pneumonia,1
+2025-03,Oromia,Diabetes,2
+2025-03,Oromia,Diarrheal Disease,1
+2025-03,Somali,Diabetes,1
+2025-04,Addis Ababa,Diarrheal Disease,1
+2025-04,Amhara,Hypertension,1
+2025-04,Amhara,Malaria,1
+2025-04,Oromia,Diarrheal Disease,1
+2025-04,Oromia,Malaria,1
+2025-04,Oromia,Pneumonia,2
+2025-04,Somali,Malaria,1
+2025-04,Tigray,Diarrheal Disease,2
+2025-05,Addis Ababa,Diarrheal Disease,1
+2025-05,Addis Ababa,Hypertension,1
+2025-05,Addis Ababa,Malnutrition,1
+2025-05,Amhara,Hypertension,1
+2025-05,Amhara,Malaria,1
+2025-05,Amhara,Pneumonia,1
+2025-05,Oromia,Diabetes,2
+2025-05,Oromia,Hypertension,1
+2025-05,Somali,Diarrheal Disease,1
+2025-05,Somali,Malnutrition,1
+2025-05,Somali,Pneumonia,1
+2025-05,Somali,Tuberculosis,1
+2025-05,Tigray,Diabetes,1
+2025-05,Tigray,Hypertension,2
+2025-05,Tigray,Malnutrition,1
+2025-06,Amhara,Diarrheal Disease,1
+2025-06,Amhara,Malaria,1
+2025-06,Oromia,Hypertension,1
+2025-06,Oromia,Malaria,2
+2025-06,Somali,Malaria,1
+2025-06,Somali,Malnutrition,1
+2025-06,Tigray,Malaria,1
+2025-06,Tigray,Malnutrition,1
+2025-06,Tigray,Pneumonia,1
+2025-06,Tigray,Tuberculosis,2
+2025-07,Amhara,Diabetes,1
+2025-07,Amhara,Pneumonia,1
+2025-07,Oromia,Diabetes,1
+2025-07,Oromia,Diarrheal Disease,1
+2025-07,Somali,Diabetes,1
+2025-07,Somali,Diarrheal Disease,1
+2025-07,Somali,Pneumonia,3
+2025-07,Somali,Tuberculosis,1
+2025-07,Tigray,Pneumonia,1
+2025-07,Tigray,Tuberculosis,1
+2025-08,Addis Ababa,Malnutrition,2
+2025-08,Addis Ababa,Pneumonia,2
+2025-08,Amhara,Diabetes,1
+2025-08,Amhara,Diarrheal Disease,2
+2025-08,Amhara,Hypertension,1
+2025-08,Amhara,Malnutrition,1
+2025-08,Oromia,Diabetes,1
+2025-08,Oromia,Tuberculosis,1
+2025-08,Somali,Malnutrition,1
+2025-08,Tigray,Diabetes,1
+2025-09,Addis Ababa,Hypertension,1
+2025-09,Addis Ababa,Pneumonia,1
+2025-09,Amhara,Tuberculosis,1
+2025-09,Oromia,Diabetes,1
+2025-09,Oromia,Diarrheal Disease,1
+2025-09,Somali,Hypertension,1
+2025-09,Somali,Malnutrition,1
+2025-09,Somali,Pneumonia,1
+2025-09,Tigray,Diabetes,2
+2025-09,Tigray,Hypertension,1
+2025-09,Tigray,Pneumonia,1
+2025-10,Addis Ababa,Diarrheal Disease,1
+2025-10,Addis Ababa,Malnutrition,1
+2025-10,Amhara,Diarrheal Disease,1
+2025-10,Amhara,Pneumonia,1
+2025-10,Amhara,Tuberculosis,1
+2025-10,Oromia,Diabetes,1
+2025-10,Oromia,Pneumonia,1
+2025-10,Somali,Diarrheal Disease,1
+2025-10,Somali,Hypertension,1
+2025-10,Tigray,Malaria,1
+2025-11,Addis Ababa,Diabetes,1
+2025-11,Addis Ababa,Diarrheal Disease,1
+2025-11,Amhara,Hypertension,2
+2025-11,Amhara,Malaria,2
+2025-11,Amhara,Pneumonia,1
+2025-11,Oromia,Malnutrition,1
+2025-11,Somali,Diabetes,1
+2025-11,Somali,Diarrheal Disease,1
+2025-11,Somali,Malaria,2
+2025-11,Tigray,Malaria,2
+2025-11,Tigray,Malnutrition,2
+2025-11,Tigray,Tuberculosis,1
+2025-12,Addis Ababa,Tuberculosis,1
+2025-12,Amhara,Diabetes,1
+2025-12,Amhara,Diarrheal Disease,2
+2025-12,Amhara,Malnutrition,1
+2025-12,Amhara,Tuberculosis,1
+2025-12,Oromia,Diabetes,2
+2025-12,Oromia,Hypertension,1
+2025-12,Oromia,Malnutrition,1
+2025-12,Oromia,Tuberculosis,1
+2025-12,Somali,Malaria,1
+2025-12,Somali,Pneumonia,2
+2025-12,Somali,Tuberculosis,1
+2025-12,Tigray,Malnutrition,1
+2025-12,Tigray,Pneumonia,1
+2025-12,Tigray,Tuberculosis,2

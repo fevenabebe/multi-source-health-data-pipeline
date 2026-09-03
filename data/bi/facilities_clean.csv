@@ -1,0 +1,19 @@
+facility_id,facility_name,region,facility_type,ownership
+FAC001,Somali Hospital 1,Somali,Clinic,Private
+FAC002,Oromia Hospital 2,Oromia,Clinic,Government
+FAC003,Somali Clinic 3,Somali,Hospital,NGO
+FAC004,Tigray Hospital 4,Tigray,Hospital,Government
+FAC005,Oromia Clinic 5,Oromia,Hospital,NGO
+FAC006,Oromia Clinic 6,Oromia,Clinic,NGO
+FAC007,Tigray Hospital 7,Tigray,Clinic,Private
+FAC008,Addis Hospital 8,Addis Ababa,Health Center,Private
+FAC009,Oromia Hospital 9,Oromia,Hospital,Government
+FAC010,Tigray Hospital 10,Tigray,Health Center,NGO
+FAC011,Amhara Hospital 11,Amhara,Health Center,NGO
+FAC012,Addis Health Center 12,Addis Ababa,Clinic,Private
+FAC013,Somali Clinic 13,Somali,Clinic,Government
+FAC014,Somali Hospital 14,Somali,Clinic,Government
+FAC015,Amhara Hospital 15,Amhara,Hospital,Private
+FAC016,Amhara Health Center 16,Amhara,Health Center,Government
+FAC017,Amhara Health Center 17,Amhara,Clinic,Private
+FAC018,Somali Clinic 18,Somali,Hospital,NGO

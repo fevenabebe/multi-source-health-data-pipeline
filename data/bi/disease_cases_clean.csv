@@ -1,0 +1,301 @@
+case_id,patient_id,disease_name,facility,diagnosis_date,severity,facility_id
+C00001,P00278,Diarrheal Disease,Addis Hospital 8,2025-10-13,Severe,FAC008
+C00002,P00337,Pneumonia,Somali Hospital 1,2024-11-10,Moderate,FAC001
+C00003,P00122,Pneumonia,Amhara Health Center 17,2025-05-18,Moderate,FAC017
+C00004,P00048,Malaria,Oromia Hospital 9,2024-08-25,Severe,FAC009
+C00005,P00044,Hypertension,Amhara Hospital 15,2024-04-07,Unknown,FAC015
+C00006,P00304,Hypertension,Somali Clinic 3,2024-03-04,Moderate,FAC003
+C00007,P00150,Diarrheal Disease,Addis Hospital 8,2024-11-18,Severe,FAC008
+C00008,P00232,Diarrheal Disease,Amhara Hospital 11,2024-08-27,Moderate,FAC011
+C00009,P00300,Malaria,Oromia Clinic 5,2024-06-08,Moderate,FAC005
+C00010,P00239,Diarrheal Disease,Amhara Hospital 15,2025-02-20,Severe,FAC015
+C00011,P00232,Diarrheal Disease,Tigray Hospital 7,2025-04-19,Mild,FAC007
+C00012,P00081,Tuberculosis,Somali Clinic 3,2025-12-03,Mild,FAC003
+C00013,P00168,Malnutrition,Tigray Hospital 7,2024-04-03,Severe,FAC007
+C00014,P00263,Malaria,Somali Clinic 13,2025-11-24,Severe,FAC013
+C00015,P00016,Pneumonia,Oromia Clinic 6,2025-04-08,Mild,FAC006
+C00016,P00053,Tuberculosis,Amhara Hospital 15,2024-05-23,Mild,FAC015
+C00017,P00114,Malnutrition,Oromia Hospital 2,2024-07-21,Severe,FAC002
+C00018,P00299,Hypertension,Somali Clinic 3,2024-09-22,Mild,FAC003
+C00019,P00102,Diabetes,Somali Clinic 3,2025-03-30,Mild,FAC003
+C00020,P00063,Malaria,Amhara Hospital 11,2025-04-17,Moderate,FAC011
+C00021,P00222,Tuberculosis,Tigray Hospital 4,2025-02-08,Mild,FAC004
+C00022,P00350,Pneumonia,Somali Clinic 13,2024-06-25,Moderate,FAC013
+C00023,P00141,Diarrheal Disease,Oromia Clinic 6,2025-04-01,Mild,FAC006
+C00024,P00332,Diarrheal Disease,Addis Hospital 8,2025-05-25,Unknown,FAC008
+C00025,P00045,Diarrheal Disease,Oromia Hospital 2,2025-01-27,Unknown,FAC002
+C00026,P00330,Tuberculosis,Tigray Hospital 7,2025-06-22,Mild,FAC007
+C00027,P00184,Pneumonia,Somali Clinic 13,2025-07-11,Severe,FAC013
+C00028,P00258,Diarrheal Disease,Tigray Hospital 4,2025-02-01,Moderate,FAC004
+C00029,P00164,Hypertension,Somali Hospital 1,2024-08-12,Severe,FAC001
+C00030,P00242,Hypertension,Oromia Hospital 2,2025-01-01,Moderate,FAC002
+C00031,P00127,Diabetes,Tigray Hospital 4,2024-09-03,Mild,FAC004
+C00032,P00295,Tuberculosis,Addis Hospital 8,2025-02-01,Moderate,FAC008
+C00033,P00122,Hypertension,Oromia Clinic 6,2024-11-21,Mild,FAC006
+C00034,P00291,Hypertension,Addis Health Center 12,2024-05-25,Unknown,FAC012
+C00035,P00159,Malnutrition,Somali Clinic 18,2025-05-17,Mild,FAC018
+C00036,P00120,Hypertension,Oromia Hospital 2,2024-08-12,Unknown,FAC002
+C00037,P00170,Hypertension,Somali Hospital 1,2024-07-25,Severe,FAC001
+C00038,P00166,Malaria,Oromia Clinic 6,2024-01-23,Moderate,FAC006
+C00039,P00270,Tuberculosis,Tigray Hospital 4,2025-01-08,Severe,FAC004
+C00040,P00301,Malaria,Somali Clinic 13,2024-12-10,Severe,FAC013
+C00041,P00081,Diabetes,Oromia Clinic 5,2025-03-23,Severe,FAC005
+C00042,P00288,Diabetes,Oromia Clinic 6,2025-09-20,Moderate,FAC006
+C00043,P00090,Pneumonia,Tigray Hospital 4,2024-11-10,Moderate,FAC004
+C00044,P00001,Diabetes,Oromia Clinic 6,2025-08-09,Mild,FAC006
+C00045,P00309,Diarrheal Disease,Oromia Clinic 6,2025-09-18,Mild,FAC006
+C00046,P00073,Diarrheal Disease,Amhara Health Center 16,2024-03-20,Severe,FAC016
+C00047,P00086,Diabetes,Amhara Hospital 11,2024-03-31,Unknown,FAC011
+C00048,P00136,Malnutrition,Somali Hospital 1,2024-09-12,Severe,FAC001
+C00049,P00056,Diabetes,Oromia Hospital 9,2024-01-02,Unknown,FAC009
+C00050,P00215,Malnutrition,Amhara Hospital 15,2025-02-27,Unknown,FAC015
+C00051,P00280,Pneumonia,Addis Health Center 12,2024-04-13,Moderate,FAC012
+C00052,P00232,Malaria,Oromia Clinic 6,2024-02-04,Mild,FAC006
+C00053,P00134,Malaria,Amhara Hospital 11,2024-03-16,Moderate,FAC011
+C00054,P00083,Diabetes,Somali Clinic 13,2024-03-17,Severe,FAC013
+C00055,P00016,Pneumonia,Amhara Health Center 16,2025-10-31,Unknown,FAC016
+C00056,P00028,Malaria,Oromia Clinic 6,2024-12-05,Moderate,FAC006
+C00057,P00284,Diabetes,Somali Hospital 14,2025-07-07,Severe,FAC014
+C00058,P00122,Malaria,Tigray Hospital 10,2024-02-20,Unknown,FAC010
+C00059,P00028,Diarrheal Disease,Oromia Clinic 5,2024-01-04,Mild,FAC005
+C00060,P00339,Diabetes,Tigray Hospital 10,2025-09-06,Moderate,FAC010
+C00061,P00014,Malnutrition,Tigray Hospital 4,2024-06-23,Mild,FAC004
+C00062,P00060,Diarrheal Disease,Amhara Health Center 16,2025-02-11,Unknown,FAC016
+C00063,P00047,Diabetes,Oromia Hospital 9,2025-07-11,Moderate,FAC009
+C00064,P00196,Diarrheal Disease,Addis Health Center 12,2024-07-10,Mild,FAC012
+C00065,P00226,Pneumonia,Oromia Hospital 9,2024-09-26,Severe,FAC009
+C00066,P00032,Malnutrition,Tigray Hospital 4,2025-12-14,Mild,FAC004
+C00067,P00278,Pneumonia,Addis Health Center 12,2025-08-26,Mild,FAC012
+C00068,P00268,Pneumonia,Somali Clinic 13,2025-07-02,Moderate,FAC013
+C00069,P00154,Malaria,Amhara Health Center 16,2025-02-08,Moderate,FAC016
+C00070,P00230,Malnutrition,Tigray Hospital 4,2024-06-20,Moderate,FAC004
+C00071,P00022,Pneumonia,Oromia Clinic 5,2024-03-21,Moderate,FAC005
+C00072,P00305,Diarrheal Disease,Oromia Clinic 5,2024-11-23,Mild,FAC005
+C00073,P00285,Pneumonia,Somali Clinic 13,2025-07-19,Severe,FAC013
+C00074,P00235,Tuberculosis,Amhara Health Center 17,2024-01-13,Mild,FAC017
+C00075,P00077,Malnutrition,Somali Hospital 14,2025-08-03,Mild,FAC014
+C00076,P00052,Tuberculosis,Tigray Hospital 4,2024-10-19,Unknown,FAC004
+C00077,P00197,Diabetes,Oromia Hospital 9,2025-05-12,Mild,FAC009
+C00078,P00142,Pneumonia,Oromia Clinic 6,2024-05-27,Mild,FAC006
+C00079,P00170,Diabetes,Somali Clinic 13,2024-08-31,Unknown,FAC013
+C00080,P00191,Malaria,Oromia Hospital 9,2024-12-11,Severe,FAC009
+C00081,P00252,Tuberculosis,Oromia Hospital 9,2025-12-13,Moderate,FAC009
+C00082,P00154,Diabetes,Oromia Clinic 5,2025-03-29,Severe,FAC005
+C00083,P00310,Diabetes,Somali Hospital 14,2024-04-01,Unknown,FAC014
+C00084,P00209,Diabetes,Tigray Hospital 7,2025-05-11,Mild,FAC007
+C00085,P00082,Malaria,Amhara Health Center 17,2024-11-14,Moderate,FAC017
+C00086,P00292,Malaria,Amhara Health Center 17,2024-06-26,Moderate,FAC017
+C00087,P00128,Malaria,Oromia Hospital 2,2025-04-12,Severe,FAC002
+C00088,P00141,Diarrheal Disease,Tigray Hospital 7,2025-04-20,Mild,FAC007
+C00089,P00124,Diarrheal Disease,Somali Hospital 1,2025-05-15,Moderate,FAC001
+C00090,P00301,Hypertension,Amhara Health Center 16,2024-12-24,Moderate,FAC016
+C00091,P00047,Diarrheal Disease,Oromia Hospital 9,2024-01-29,Mild,FAC009
+C00092,P00293,Tuberculosis,Oromia Clinic 6,2024-08-07,Moderate,FAC006
+C00093,P00138,Diabetes,Tigray Hospital 7,2025-02-23,Mild,FAC007
+C00094,P00068,Diabetes,Amhara Health Center 16,2024-06-26,Moderate,FAC016
+C00095,P00312,Tuberculosis,Oromia Hospital 9,2024-11-08,Unknown,FAC009
+C00096,P00179,Pneumonia,Somali Clinic 13,2024-09-15,Unknown,FAC013
+C00097,P00347,Hypertension,Tigray Hospital 10,2025-09-30,Mild,FAC010
+C00098,P00262,Diabetes,Somali Hospital 1,2025-01-18,Severe,FAC001
+C00099,P00247,Malaria,Tigray Hospital 4,2024-12-10,Severe,FAC004
+C00100,P00134,Diabetes,Oromia Hospital 9,2025-12-29,Moderate,FAC009
+C00101,P00265,Tuberculosis,Oromia Clinic 5,2024-09-03,Unknown,FAC005
+C00102,P00349,Malnutrition,Amhara Hospital 11,2024-01-27,Severe,FAC011
+C00103,P00215,Pneumonia,Oromia Hospital 9,2025-02-01,Moderate,FAC009
+C00104,P00114,Diabetes,Amhara Hospital 11,2025-07-01,Severe,FAC011
+C00105,P00154,Tuberculosis,Amhara Health Center 17,2024-06-23,Severe,FAC017
+C00106,P00242,Malnutrition,Tigray Hospital 4,2024-09-21,Severe,FAC004
+C00107,P00114,Diarrheal Disease,Somali Clinic 3,2024-08-16,Unknown,FAC003
+C00108,P00191,Diarrheal Disease,Amhara Hospital 11,2025-08-22,Unknown,FAC011
+C00109,P00241,Malaria,Tigray Hospital 4,2025-10-11,Unknown,FAC004
+C00110,P00257,Malaria,Tigray Hospital 7,2025-11-28,Severe,FAC007
+C00111,P00028,Tuberculosis,Somali Hospital 14,2024-06-03,Moderate,FAC014
+C00112,P00210,Hypertension,Amhara Hospital 11,2025-04-13,Severe,FAC011
+C00113,P00042,Pneumonia,Oromia Clinic 6,2024-12-06,Severe,FAC006
+C00114,P00003,Pneumonia,Oromia Hospital 2,2024-10-07,Moderate,FAC002
+C00115,P00082,Pneumonia,Tigray Hospital 4,2024-03-31,Unknown,FAC004
+C00116,P00207,Pneumonia,Somali Hospital 14,2025-05-03,Mild,FAC014
+C00117,P00274,Malnutrition,Oromia Hospital 2,2025-01-17,Severe,FAC002
+C00118,P00098,Malaria,Amhara Health Center 17,2025-11-23,Moderate,FAC017
+C00119,P00177,Diarrheal Disease,Addis Hospital 8,2024-05-12,Unknown,FAC008
+C00120,P00302,Diarrheal Disease,Amhara Health Center 17,2024-06-20,Mild,FAC017
+C00121,P00149,Pneumonia,Tigray Hospital 10,2025-06-16,Unknown,FAC010
+C00122,P00176,Pneumonia,Oromia Clinic 5,2025-01-02,Moderate,FAC005
+C00123,P00010,Malnutrition,Somali Clinic 13,2024-08-17,Moderate,FAC013
+C00124,P00302,Hypertension,Somali Hospital 1,2024-06-22,Severe,FAC001
+C00125,P00193,Diabetes,Oromia Hospital 2,2024-09-18,Mild,FAC002
+C00126,P00335,Tuberculosis,Tigray Hospital 4,2024-01-21,Mild,FAC004
+C00127,P00228,Pneumonia,Somali Hospital 14,2024-05-06,Unknown,FAC014
+C00128,P00106,Diabetes,Oromia Clinic 5,2025-12-03,Severe,FAC005
+C00129,P00339,Malaria,Somali Hospital 14,2025-11-09,Moderate,FAC014
+C00130,P00054,Hypertension,Somali Hospital 14,2025-09-24,Severe,FAC014
+C00131,P00055,Pneumonia,Tigray Hospital 4,2024-07-22,Severe,FAC004
+C00132,P00104,Diarrheal Disease,Amhara Health Center 17,2025-12-21,Severe,FAC017
+C00133,P00021,Hypertension,Oromia Clinic 6,2025-05-23,Unknown,FAC006
+C00134,P00121,Malaria,Amhara Hospital 11,2024-01-14,Mild,FAC011
+C00135,P00343,Pneumonia,Tigray Hospital 4,2024-06-01,Mild,FAC004
+C00136,P00132,Diabetes,Tigray Hospital 4,2024-08-24,Severe,FAC004
+C00137,P00238,Malaria,Oromia Hospital 9,2024-04-12,Mild,FAC009
+C00138,P00185,Tuberculosis,Tigray Hospital 10,2025-11-24,Unknown,FAC010
+C00139,P00049,Tuberculosis,Tigray Hospital 4,2024-02-16,Moderate,FAC004
+C00140,P00169,Diarrheal Disease,Oromia Clinic 6,2025-03-24,Mild,FAC006
+C00141,P00176,Malnutrition,Addis Health Center 12,2024-04-26,Unknown,FAC012
+C00142,P00140,Tuberculosis,Amhara Hospital 15,2025-01-29,Unknown,FAC015
+C00143,P00058,Malnutrition,Oromia Clinic 6,2025-12-13,Moderate,FAC006
+C00144,P00214,Hypertension,Tigray Hospital 4,2025-05-09,Moderate,FAC004
+C00145,P00184,Hypertension,Somali Clinic 13,2024-01-30,Unknown,FAC013
+C00146,P00058,Pneumonia,Amhara Health Center 16,2025-03-27,Mild,FAC016
+C00147,P00336,Diarrheal Disease,Oromia Hospital 9,2024-01-13,Severe,FAC009
+C00148,P00268,Diabetes,Amhara Health Center 17,2025-12-18,Unknown,FAC017
+C00149,P00247,Diarrheal Disease,Addis Hospital 8,2025-11-10,Moderate,FAC008
+C00150,P00314,Malaria,Somali Clinic 18,2024-01-12,Unknown,FAC018
+C00151,P00085,Malaria,Amhara Health Center 16,2025-05-18,Moderate,FAC016
+C00152,P00143,Malaria,Amhara Hospital 11,2025-06-03,Unknown,FAC011
+C00153,P00121,Malaria,Somali Clinic 13,2025-04-15,Unknown,FAC013
+C00154,P00256,Pneumonia,Somali Clinic 3,2024-11-19,Unknown,FAC003
+C00155,P00053,Pneumonia,Somali Hospital 1,2025-02-26,Mild,FAC001
+C00156,P00310,Hypertension,Somali Clinic 3,2025-10-14,Moderate,FAC003
+C00157,P00175,Diarrheal Disease,Amhara Hospital 15,2024-02-25,Unknown,FAC015
+C00158,P00287,Tuberculosis,Amhara Hospital 11,2025-09-26,Severe,FAC011
+C00159,P00059,Malaria,Amhara Hospital 15,2025-11-05,Mild,FAC015
+C00160,P00182,Tuberculosis,Amhara Hospital 11,2025-10-10,Severe,FAC011
+C00161,P00024,Malnutrition,Tigray Hospital 4,2025-05-19,Unknown,FAC004
+C00162,P00131,Hypertension,Tigray Hospital 4,2024-07-19,Mild,FAC004
+C00163,P00111,Pneumonia,Somali Clinic 13,2024-07-14,Mild,FAC013
+C00164,P00024,Diabetes,Somali Hospital 14,2025-11-19,Unknown,FAC014
+C00165,P00338,Hypertension,Amhara Hospital 15,2025-05-31,Unknown,FAC015
+C00166,P00272,Diabetes,Somali Hospital 1,2024-02-19,Unknown,FAC001
+C00167,P00091,Diabetes,Amhara Health Center 17,2025-08-15,Moderate,FAC017
+C00168,P00199,Diabetes,Tigray Hospital 4,2025-09-06,Unknown,FAC004
+C00169,P00312,Diabetes,Somali Hospital 14,2024-09-11,Unknown,FAC014
+C00170,P00151,Pneumonia,Amhara Hospital 11,2024-05-16,Unknown,FAC011
+C00171,P00154,Tuberculosis,Amhara Health Center 17,2025-12-19,Moderate,FAC017
+C00172,P00108,Hypertension,Tigray Hospital 7,2024-10-24,Moderate,FAC007
+C00173,P00258,Hypertension,Oromia Clinic 6,2025-12-11,Mild,FAC006
+C00174,P00288,Pneumonia,Addis Health Center 12,2025-08-19,Severe,FAC012
+C00175,P00007,Hypertension,Somali Hospital 14,2024-04-19,Unknown,FAC014
+C00176,P00028,Diabetes,Oromia Clinic 5,2024-02-27,Severe,FAC005
+C00177,P00147,Diabetes,Oromia Clinic 6,2024-09-13,Mild,FAC006
+C00178,P00105,Tuberculosis,Tigray Hospital 10,2025-07-08,Severe,FAC010
+C00179,P00053,Hypertension,Amhara Hospital 15,2025-11-22,Unknown,FAC015
+C00180,P00262,Tuberculosis,Addis Hospital 8,2025-12-13,Mild,FAC008
+C00181,P00199,Pneumonia,Somali Clinic 13,2025-12-02,Mild,FAC013
+C00182,P00129,Malnutrition,Somali Hospital 1,2025-09-27,Moderate,FAC001
+C00183,P00302,Hypertension,Addis Health Center 12,2025-09-09,Moderate,FAC012
+C00184,P00230,Malnutrition,Tigray Hospital 10,2025-11-30,Moderate,FAC010
+C00185,P00264,Malaria,Oromia Clinic 6,2025-01-21,Unknown,FAC006
+C00186,P00285,Diarrheal Disease,Oromia Hospital 9,2024-05-13,Severe,FAC009
+C00187,P00170,Pneumonia,Somali Hospital 1,2025-12-27,Mild,FAC001
+C00188,P00166,Hypertension,Oromia Clinic 5,2024-02-22,Unknown,FAC005
+C00189,P00282,Diarrheal Disease,Tigray Hospital 4,2024-03-15,Moderate,FAC004
+C00190,P00267,Malaria,Oromia Clinic 6,2025-06-01,Unknown,FAC006
+C00191,P00275,Pneumonia,Somali Clinic 18,2024-04-04,Moderate,FAC018
+C00192,P00340,Diarrheal Disease,Tigray Hospital 7,2024-12-05,Severe,FAC007
+C00193,P00317,Hypertension,Tigray Hospital 7,2025-05-01,Mild,FAC007
+C00194,P00229,Malnutrition,Addis Health Center 12,2025-10-19,Mild,FAC012
+C00195,P00196,Tuberculosis,Amhara Hospital 11,2024-04-26,Severe,FAC011
+C00196,P00145,Malaria,Somali Clinic 18,2025-06-13,Unknown,FAC018
+C00197,P00023,Diarrheal Disease,Amhara Health Center 16,2025-10-29,Severe,FAC016
+C00198,P00043,Malaria,Amhara Health Center 17,2024-06-20,Mild,FAC017
+C00199,P00344,Diabetes,Tigray Hospital 7,2024-08-06,Mild,FAC007
+C00200,P00276,Tuberculosis,Tigray Hospital 7,2025-12-20,Mild,FAC007
+C00201,P00013,Pneumonia,Oromia Clinic 5,2024-12-05,Mild,FAC005
+C00202,P00028,Malnutrition,Somali Clinic 3,2024-09-14,Moderate,FAC003
+C00203,P00209,Pneumonia,Oromia Hospital 9,2025-04-06,Unknown,FAC009
+C00204,P00009,Pneumonia,Amhara Hospital 11,2025-11-20,Mild,FAC011
+C00205,P00300,Malaria,Somali Clinic 3,2025-12-18,Severe,FAC003
+C00206,P00055,Diarrheal Disease,Amhara Health Center 17,2025-12-03,Mild,FAC017
+C00207,P00225,Pneumonia,Tigray Hospital 10,2025-02-08,Unknown,FAC010
+C00208,P00274,Malnutrition,Oromia Clinic 6,2024-05-19,Severe,FAC006
+C00209,P00153,Diabetes,Oromia Clinic 5,2025-10-25,Mild,FAC005
+C00210,P00285,Malnutrition,Somali Clinic 18,2024-05-06,Mild,FAC018
+C00211,P00306,Pneumonia,Tigray Hospital 4,2025-07-04,Severe,FAC004
+C00212,P00177,Malnutrition,Tigray Hospital 7,2025-02-26,Moderate,FAC007
+C00213,P00114,Hypertension,Oromia Clinic 6,2024-09-15,Mild,FAC006
+C00214,P00344,Tuberculosis,Oromia Clinic 6,2025-08-03,Unknown,FAC006
+C00215,P00038,Diarrheal Disease,Somali Clinic 18,2025-11-18,Severe,FAC018
+C00216,P00102,Diabetes,Tigray Hospital 4,2025-08-17,Severe,FAC004
+C00217,P00066,Diabetes,Addis Health Center 12,2025-11-02,Mild,FAC012
+C00218,P00318,Malaria,Tigray Hospital 10,2024-07-17,Unknown,FAC010
+C00219,P00169,Hypertension,Amhara Hospital 15,2025-11-06,Moderate,FAC015
+C00220,P00291,Diarrheal Disease,Tigray Hospital 4,2024-11-19,Moderate,FAC004
+C00221,P00161,Malnutrition,Somali Hospital 1,2024-08-14,Severe,FAC001
+C00222,P00069,Diabetes,Addis Health Center 12,2024-12-05,Unknown,FAC012
+C00223,P00184,Tuberculosis,Amhara Hospital 15,2024-11-08,Mild,FAC015
+C00224,P00331,Hypertension,Oromia Clinic 6,2024-03-24,Moderate,FAC006
+C00225,P00101,Diarrheal Disease,Somali Clinic 18,2025-10-03,Mild,FAC018
+C00226,P00260,Diabetes,Somali Hospital 1,2024-02-01,Moderate,FAC001
+C00227,P00283,Diarrheal Disease,Oromia Hospital 2,2025-07-10,Moderate,FAC002
+C00228,P00201,Malnutrition,Addis Health Center 12,2025-08-26,Moderate,FAC012
+C00229,P00257,Hypertension,Amhara Hospital 15,2024-04-02,Severe,FAC015
+C00230,P00006,Diabetes,Amhara Health Center 17,2024-09-01,Moderate,FAC017
+C00231,P00082,Malnutrition,Amhara Hospital 15,2025-08-02,Unknown,FAC015
+C00232,P00021,Malnutrition,Addis Health Center 12,2025-05-14,Mild,FAC012
+C00233,P00190,Malnutrition,Oromia Hospital 9,2024-02-13,Severe,FAC009
+C00234,P00241,Pneumonia,Somali Clinic 13,2024-02-17,Severe,FAC013
+C00235,P00267,Diabetes,Tigray Hospital 4,2024-10-07,Moderate,FAC004
+C00236,P00335,Pneumonia,Somali Clinic 13,2025-01-09,Severe,FAC013
+C00237,P00115,Hypertension,Somali Clinic 13,2025-02-19,Severe,FAC013
+C00238,P00247,Hypertension,Amhara Health Center 16,2024-01-07,Unknown,FAC016
+C00239,P00118,Malaria,Oromia Clinic 6,2025-06-10,Moderate,FAC006
+C00240,P00096,Malnutrition,Oromia Clinic 5,2025-01-05,Moderate,FAC005
+C00241,P00170,Diabetes,Somali Hospital 14,2024-04-26,Unknown,FAC014
+C00242,P00108,Hypertension,Amhara Health Center 16,2024-06-14,Mild,FAC016
+C00243,P00023,Malnutrition,Addis Hospital 8,2025-08-10,Moderate,FAC008
+C00244,P00021,Hypertension,Amhara Health Center 17,2024-05-30,Moderate,FAC017
+C00245,P00093,Hypertension,Oromia Hospital 9,2025-02-19,Severe,FAC009
+C00246,P00111,Pneumonia,Somali Clinic 3,2025-09-13,Unknown,FAC003
+C00247,P00113,Tuberculosis,Oromia Clinic 6,2025-02-24,Moderate,FAC006
+C00248,P00136,Malnutrition,Amhara Health Center 17,2025-12-03,Unknown,FAC017
+C00249,P00036,Malnutrition,Tigray Hospital 4,2025-01-22,Moderate,FAC004
+C00250,P00009,Malnutrition,Tigray Hospital 4,2025-06-19,Moderate,FAC004
+C00251,P00091,Pneumonia,Tigray Hospital 4,2025-09-21,Mild,FAC004
+C00252,P00247,Diabetes,Somali Clinic 3,2024-05-13,Unknown,FAC003
+C00253,P00216,Diarrheal Disease,Amhara Health Center 17,2024-02-14,Moderate,FAC017
+C00254,P00196,Diarrheal Disease,Amhara Health Center 16,2025-08-26,Unknown,FAC016
+C00255,P00131,Pneumonia,Oromia Clinic 5,2024-08-26,Severe,FAC005
+C00256,P00210,Diarrheal Disease,Somali Clinic 18,2024-07-12,Mild,FAC018
+C00257,P00268,Malaria,Tigray Hospital 4,2025-06-16,Unknown,FAC004
+C00258,P00162,Pneumonia,Tigray Hospital 7,2025-01-05,Moderate,FAC007
+C00259,P00334,Hypertension,Somali Hospital 14,2024-09-16,Unknown,FAC014
+C00260,P00188,Hypertension,Tigray Hospital 4,2024-10-09,Moderate,FAC004
+C00261,P00283,Tuberculosis,Somali Hospital 14,2025-07-24,Moderate,FAC014
+C00262,P00287,Hypertension,Addis Health Center 12,2025-05-10,Severe,FAC012
+C00263,P00177,Tuberculosis,Tigray Hospital 4,2025-12-23,Moderate,FAC004
+C00264,P00118,Pneumonia,Tigray Hospital 4,2025-12-17,Mild,FAC004
+C00265,P00261,Pneumonia,Tigray Hospital 7,2024-12-12,Moderate,FAC007
+C00266,P00326,Malaria,Somali Clinic 13,2024-04-03,Unknown,FAC013
+C00267,P00046,Malaria,Somali Hospital 14,2024-09-26,Severe,FAC014
+C00268,P00312,Malaria,Somali Clinic 3,2025-01-28,Severe,FAC003
+C00269,P00090,Diabetes,Oromia Hospital 2,2025-05-21,Mild,FAC002
+C00270,P00337,Tuberculosis,Tigray Hospital 7,2025-06-14,Moderate,FAC007
+C00271,P00307,Hypertension,Oromia Hospital 2,2025-06-12,Moderate,FAC002
+C00272,P00185,Malnutrition,Oromia Hospital 2,2025-11-01,Moderate,FAC002
+C00273,P00142,Tuberculosis,Somali Clinic 3,2025-02-13,Unknown,FAC003
+C00274,P00301,Malnutrition,Somali Clinic 13,2025-06-14,Mild,FAC013
+C00275,P00282,Diarrheal Disease,Somali Clinic 3,2025-07-26,Severe,FAC003
+C00276,P00116,Hypertension,Oromia Hospital 9,2024-07-18,Unknown,FAC009
+C00277,P00003,Diarrheal Disease,Tigray Hospital 4,2024-06-28,Mild,FAC004
+C00278,P00038,Hypertension,Somali Clinic 18,2024-10-28,Mild,FAC018
+C00279,P00132,Hypertension,Amhara Health Center 17,2025-08-11,Unknown,FAC017
+C00280,P00289,Pneumonia,Somali Clinic 13,2024-09-06,Unknown,FAC013
+C00281,P00301,Tuberculosis,Amhara Hospital 15,2024-01-29,Mild,FAC015
+C00282,P00035,Pneumonia,Oromia Hospital 9,2025-10-10,Moderate,FAC009
+C00283,P00212,Diarrheal Disease,Amhara Hospital 11,2025-06-12,Severe,FAC011
+C00284,P00148,Malaria,Addis Hospital 8,2025-02-12,Mild,FAC008
+C00285,P00092,Pneumonia,Somali Clinic 18,2024-11-17,Moderate,FAC018
+C00286,P00138,Malnutrition,Tigray Hospital 4,2025-11-30,Unknown,FAC004
+C00287,P00121,Diabetes,Tigray Hospital 7,2024-09-04,Moderate,FAC007
+C00288,P00104,Tuberculosis,Addis Hospital 8,2024-09-12,Moderate,FAC008
+C00289,P00062,Malaria,Tigray Hospital 4,2025-11-23,Mild,FAC004
+C00290,P00022,Tuberculosis,Somali Clinic 18,2025-05-08,Severe,FAC018
+C00291,P00295,Tuberculosis,Amhara Health Center 16,2024-10-08,Moderate,FAC016
+C00292,P00144,Pneumonia,Amhara Health Center 17,2024-08-15,Mild,FAC017
+C00293,P00217,Pneumonia,Amhara Health Center 17,2025-07-07,Severe,FAC017
+C00294,P00090,Pneumonia,Somali Clinic 13,2024-05-03,Severe,FAC013
+C00295,P00007,Diabetes,Somali Hospital 1,2024-08-03,Mild,FAC001
+C00296,P00186,Hypertension,Amhara Hospital 11,2024-09-22,Severe,FAC011
+C00297,P00138,Pneumonia,Addis Hospital 8,2025-09-19,Severe,FAC008
+C00298,P00256,Pneumonia,Oromia Clinic 6,2024-08-03,Severe,FAC006
+C00299,P00206,Diarrheal Disease,Addis Health Center 12,2025-04-06,Moderate,FAC012
+C00300,P00118,Tuberculosis,Tigray Hospital 4,2024-04-12,Moderate,FAC004

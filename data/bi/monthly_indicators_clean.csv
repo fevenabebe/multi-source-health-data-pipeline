@@ -1,0 +1,433 @@
+month,region,indicator_name,indicator_value
+2024-01,Addis Ababa,Immunization Coverage (%),72.8
+2024-01,Addis Ababa,Bed Occupancy Rate (%),51.6
+2024-01,Addis Ababa,Antenatal Care Visits,534.0
+2024-01,Oromia,Immunization Coverage (%),50.4
+2024-01,Oromia,Bed Occupancy Rate (%),47.9
+2024-01,Oromia,Antenatal Care Visits,579.0
+2024-01,Amhara,Immunization Coverage (%),82.5
+2024-01,Amhara,Bed Occupancy Rate (%),57.7
+2024-01,Amhara,Antenatal Care Visits,631.0
+2024-01,Tigray,Immunization Coverage (%),63.5
+2024-01,Tigray,Bed Occupancy Rate (%),49.6
+2024-01,Tigray,Antenatal Care Visits,883.0
+2024-01,SNNPR,Immunization Coverage (%),68.1
+2024-01,SNNPR,Bed Occupancy Rate (%),45.7
+2024-01,SNNPR,Antenatal Care Visits,392.0
+2024-01,Somali,Immunization Coverage (%),61.3
+2024-01,Somali,Bed Occupancy Rate (%),72.9
+2024-01,Somali,Antenatal Care Visits,402.0
+2024-02,Addis Ababa,Immunization Coverage (%),64.3
+2024-02,Addis Ababa,Bed Occupancy Rate (%),91.2
+2024-02,Addis Ababa,Antenatal Care Visits,640.0
+2024-02,Oromia,Immunization Coverage (%),97.8
+2024-02,Oromia,Bed Occupancy Rate (%),61.0
+2024-02,Oromia,Antenatal Care Visits,572.0
+2024-02,Amhara,Immunization Coverage (%),85.7
+2024-02,Amhara,Bed Occupancy Rate (%),92.5
+2024-02,Amhara,Antenatal Care Visits,678.0
+2024-02,Tigray,Immunization Coverage (%),67.4
+2024-02,Tigray,Bed Occupancy Rate (%),91.2
+2024-02,Tigray,Antenatal Care Visits,877.0
+2024-02,SNNPR,Immunization Coverage (%),64.9
+2024-02,SNNPR,Bed Occupancy Rate (%),73.7
+2024-02,SNNPR,Antenatal Care Visits,131.0
+2024-02,Somali,Immunization Coverage (%),60.3
+2024-02,Somali,Bed Occupancy Rate (%),58.7
+2024-02,Somali,Antenatal Care Visits,777.0
+2024-03,Addis Ababa,Immunization Coverage (%),75.7
+2024-03,Addis Ababa,Bed Occupancy Rate (%),56.0
+2024-03,Addis Ababa,Antenatal Care Visits,849.0
+2024-03,Oromia,Immunization Coverage (%),84.1
+2024-03,Oromia,Bed Occupancy Rate (%),97.0
+2024-03,Oromia,Antenatal Care Visits,221.0
+2024-03,Amhara,Immunization Coverage (%),90.4
+2024-03,Amhara,Bed Occupancy Rate (%),82.9
+2024-03,Amhara,Antenatal Care Visits,307.0
+2024-03,Tigray,Immunization Coverage (%),81.3
+2024-03,Tigray,Bed Occupancy Rate (%),52.4
+2024-03,Tigray,Antenatal Care Visits,155.0
+2024-03,SNNPR,Immunization Coverage (%),43.8
+2024-03,SNNPR,Bed Occupancy Rate (%),72.4
+2024-03,SNNPR,Antenatal Care Visits,839.0
+2024-03,Somali,Immunization Coverage (%),70.9
+2024-03,Somali,Bed Occupancy Rate (%),46.1
+2024-03,Somali,Antenatal Care Visits,209.0
+2024-04,Addis Ababa,Immunization Coverage (%),78.6
+2024-04,Addis Ababa,Bed Occupancy Rate (%),58.3
+2024-04,Addis Ababa,Antenatal Care Visits,805.0
+2024-04,Oromia,Immunization Coverage (%),66.1
+2024-04,Oromia,Bed Occupancy Rate (%),47.7
+2024-04,Oromia,Antenatal Care Visits,79.0
+2024-04,Amhara,Immunization Coverage (%),79.1
+2024-04,Amhara,Bed Occupancy Rate (%),91.0
+2024-04,Amhara,Antenatal Care Visits,603.0
+2024-04,Tigray,Immunization Coverage (%),72.4
+2024-04,Tigray,Bed Occupancy Rate (%),97.2
+2024-04,Tigray,Antenatal Care Visits,602.0
+2024-04,SNNPR,Immunization Coverage (%),74.9
+2024-04,SNNPR,Bed Occupancy Rate (%),77.2
+2024-04,SNNPR,Antenatal Care Visits,627.0
+2024-04,Somali,Immunization Coverage (%),70.9
+2024-04,Somali,Bed Occupancy Rate (%),71.5
+2024-04,Somali,Antenatal Care Visits,543.0
+2024-05,Addis Ababa,Immunization Coverage (%),53.4
+2024-05,Addis Ababa,Bed Occupancy Rate (%),66.1
+2024-05,Addis Ababa,Antenatal Care Visits,472.0
+2024-05,Oromia,Immunization Coverage (%),49.2
+2024-05,Oromia,Bed Occupancy Rate (%),40.0
+2024-05,Oromia,Antenatal Care Visits,402.0
+2024-05,Amhara,Immunization Coverage (%),67.7
+2024-05,Amhara,Bed Occupancy Rate (%),80.6
+2024-05,Amhara,Antenatal Care Visits,823.0
+2024-05,Tigray,Immunization Coverage (%),57.7
+2024-05,Tigray,Bed Occupancy Rate (%),87.1
+2024-05,Tigray,Antenatal Care Visits,286.0
+2024-05,SNNPR,Immunization Coverage (%),72.3
+2024-05,SNNPR,Bed Occupancy Rate (%),64.3
+2024-05,SNNPR,Antenatal Care Visits,497.0
+2024-05,Somali,Immunization Coverage (%),54.7
+2024-05,Somali,Bed Occupancy Rate (%),83.5
+2024-05,Somali,Antenatal Care Visits,898.0
+2024-06,Addis Ababa,Immunization Coverage (%),53.0
+2024-06,Addis Ababa,Bed Occupancy Rate (%),64.9
+2024-06,Addis Ababa,Antenatal Care Visits,579.0
+2024-06,Oromia,Immunization Coverage (%),56.8
+2024-06,Oromia,Bed Occupancy Rate (%),71.4
+2024-06,Oromia,Antenatal Care Visits,472.0
+2024-06,Amhara,Immunization Coverage (%),90.4
+2024-06,Amhara,Bed Occupancy Rate (%),48.1
+2024-06,Amhara,Antenatal Care Visits,702.0
+2024-06,Tigray,Immunization Coverage (%),76.4
+2024-06,Tigray,Bed Occupancy Rate (%),81.3
+2024-06,Tigray,Antenatal Care Visits,242.0
+2024-06,SNNPR,Immunization Coverage (%),41.1
+2024-06,SNNPR,Bed Occupancy Rate (%),97.2
+2024-06,SNNPR,Antenatal Care Visits,240.0
+2024-06,Somali,Immunization Coverage (%),56.6
+2024-06,Somali,Bed Occupancy Rate (%),82.2
+2024-06,Somali,Antenatal Care Visits,58.0
+2024-07,Addis Ababa,Immunization Coverage (%),45.3
+2024-07,Addis Ababa,Bed Occupancy Rate (%),69.1
+2024-07,Addis Ababa,Antenatal Care Visits,480.0
+2024-07,Oromia,Immunization Coverage (%),86.4
+2024-07,Oromia,Bed Occupancy Rate (%),98.9
+2024-07,Oromia,Antenatal Care Visits,763.0
+2024-07,Amhara,Immunization Coverage (%),59.5
+2024-07,Amhara,Bed Occupancy Rate (%),43.3
+2024-07,Amhara,Antenatal Care Visits,123.0
+2024-07,Tigray,Immunization Coverage (%),67.7
+2024-07,Tigray,Bed Occupancy Rate (%),92.8
+2024-07,Tigray,Antenatal Care Visits,886.0
+2024-07,SNNPR,Immunization Coverage (%),88.9
+2024-07,SNNPR,Bed Occupancy Rate (%),97.5
+2024-07,SNNPR,Antenatal Care Visits,304.0
+2024-07,Somali,Immunization Coverage (%),85.5
+2024-07,Somali,Bed Occupancy Rate (%),54.6
+2024-07,Somali,Antenatal Care Visits,253.0
+2024-08,Addis Ababa,Immunization Coverage (%),83.4
+2024-08,Addis Ababa,Bed Occupancy Rate (%),70.7
+2024-08,Addis Ababa,Antenatal Care Visits,534.0
+2024-08,Oromia,Immunization Coverage (%),80.2
+2024-08,Oromia,Bed Occupancy Rate (%),95.2
+2024-08,Oromia,Antenatal Care Visits,694.0
+2024-08,Amhara,Immunization Coverage (%),42.5
+2024-08,Amhara,Bed Occupancy Rate (%),70.7
+2024-08,Amhara,Antenatal Care Visits,542.0
+2024-08,Tigray,Immunization Coverage (%),57.6
+2024-08,Tigray,Bed Occupancy Rate (%),92.4
+2024-08,Tigray,Antenatal Care Visits,273.0
+2024-08,SNNPR,Immunization Coverage (%),53.9
+2024-08,SNNPR,Bed Occupancy Rate (%),59.1
+2024-08,SNNPR,Antenatal Care Visits,863.0
+2024-08,Somali,Immunization Coverage (%),74.5
+2024-08,Somali,Bed Occupancy Rate (%),86.6
+2024-08,Somali,Antenatal Care Visits,93.0
+2024-09,Addis Ababa,Immunization Coverage (%),86.2
+2024-09,Addis Ababa,Bed Occupancy Rate (%),80.6
+2024-09,Addis Ababa,Antenatal Care Visits,430.0
+2024-09,Oromia,Immunization Coverage (%),54.7
+2024-09,Oromia,Bed Occupancy Rate (%),45.4
+2024-09,Oromia,Antenatal Care Visits,396.0
+2024-09,Amhara,Immunization Coverage (%),43.5
+2024-09,Amhara,Bed Occupancy Rate (%),78.0
+2024-09,Amhara,Antenatal Care Visits,599.0
+2024-09,Tigray,Immunization Coverage (%),47.4
+2024-09,Tigray,Bed Occupancy Rate (%),58.7
+2024-09,Tigray,Antenatal Care Visits,857.0
+2024-09,SNNPR,Immunization Coverage (%),84.6
+2024-09,SNNPR,Bed Occupancy Rate (%),83.3
+2024-09,SNNPR,Antenatal Care Visits,755.0
+2024-09,Somali,Immunization Coverage (%),61.1
+2024-09,Somali,Bed Occupancy Rate (%),54.8
+2024-09,Somali,Antenatal Care Visits,546.0
+2024-10,Addis Ababa,Immunization Coverage (%),65.8
+2024-10,Addis Ababa,Bed Occupancy Rate (%),72.0
+2024-10,Addis Ababa,Antenatal Care Visits,244.0
+2024-10,Oromia,Immunization Coverage (%),72.1
+2024-10,Oromia,Bed Occupancy Rate (%),83.2
+2024-10,Oromia,Antenatal Care Visits,663.0
+2024-10,Amhara,Immunization Coverage (%),49.5
+2024-10,Amhara,Bed Occupancy Rate (%),49.1
+2024-10,Amhara,Antenatal Care Visits,889.0
+2024-10,Tigray,Immunization Coverage (%),72.0
+2024-10,Tigray,Bed Occupancy Rate (%),40.0
+2024-10,Tigray,Antenatal Care Visits,568.0
+2024-10,SNNPR,Immunization Coverage (%),83.3
+2024-10,SNNPR,Bed Occupancy Rate (%),76.6
+2024-10,SNNPR,Antenatal Care Visits,844.0
+2024-10,Somali,Immunization Coverage (%),54.1
+2024-10,Somali,Bed Occupancy Rate (%),43.7
+2024-10,Somali,Antenatal Care Visits,888.0
+2024-11,Addis Ababa,Immunization Coverage (%),51.2
+2024-11,Addis Ababa,Bed Occupancy Rate (%),85.2
+2024-11,Addis Ababa,Antenatal Care Visits,677.0
+2024-11,Oromia,Immunization Coverage (%),59.0
+2024-11,Oromia,Bed Occupancy Rate (%),59.0
+2024-11,Oromia,Antenatal Care Visits,585.0
+2024-11,Amhara,Immunization Coverage (%),43.9
+2024-11,Amhara,Bed Occupancy Rate (%),50.5
+2024-11,Amhara,Antenatal Care Visits,256.0
+2024-11,Tigray,Immunization Coverage (%),68.6
+2024-11,Tigray,Bed Occupancy Rate (%),41.9
+2024-11,Tigray,Antenatal Care Visits,447.0
+2024-11,SNNPR,Immunization Coverage (%),68.9
+2024-11,SNNPR,Bed Occupancy Rate (%),81.4
+2024-11,SNNPR,Antenatal Care Visits,100.0
+2024-11,Somali,Immunization Coverage (%),53.0
+2024-11,Somali,Bed Occupancy Rate (%),44.2
+2024-11,Somali,Antenatal Care Visits,721.0
+2024-12,Addis Ababa,Immunization Coverage (%),94.8
+2024-12,Addis Ababa,Bed Occupancy Rate (%),67.6
+2024-12,Addis Ababa,Antenatal Care Visits,419.0
+2024-12,Oromia,Immunization Coverage (%),88.5
+2024-12,Oromia,Bed Occupancy Rate (%),43.4
+2024-12,Oromia,Antenatal Care Visits,322.0
+2024-12,Amhara,Immunization Coverage (%),42.4
+2024-12,Amhara,Bed Occupancy Rate (%),89.2
+2024-12,Amhara,Antenatal Care Visits,271.0
+2024-12,Tigray,Immunization Coverage (%),45.7
+2024-12,Tigray,Bed Occupancy Rate (%),53.6
+2024-12,Tigray,Antenatal Care Visits,244.0
+2024-12,SNNPR,Immunization Coverage (%),71.0
+2024-12,SNNPR,Bed Occupancy Rate (%),73.6
+2024-12,SNNPR,Antenatal Care Visits,621.0
+2024-12,Somali,Immunization Coverage (%),72.9
+2024-12,Somali,Bed Occupancy Rate (%),46.2
+2024-12,Somali,Antenatal Care Visits,640.0
+2025-01,Addis Ababa,Immunization Coverage (%),79.8
+2025-01,Addis Ababa,Bed Occupancy Rate (%),92.1
+2025-01,Addis Ababa,Antenatal Care Visits,861.0
+2025-01,Oromia,Immunization Coverage (%),72.4
+2025-01,Oromia,Bed Occupancy Rate (%),59.9
+2025-01,Oromia,Antenatal Care Visits,596.0
+2025-01,Amhara,Immunization Coverage (%),66.1
+2025-01,Amhara,Bed Occupancy Rate (%),93.2
+2025-01,Amhara,Antenatal Care Visits,382.0
+2025-01,Tigray,Immunization Coverage (%),64.3
+2025-01,Tigray,Bed Occupancy Rate (%),65.4
+2025-01,Tigray,Antenatal Care Visits,381.0
+2025-01,SNNPR,Immunization Coverage (%),54.2
+2025-01,SNNPR,Bed Occupancy Rate (%),52.6
+2025-01,SNNPR,Antenatal Care Visits,812.0
+2025-01,Somali,Immunization Coverage (%),61.2
+2025-01,Somali,Bed Occupancy Rate (%),66.4
+2025-01,Somali,Antenatal Care Visits,50.0
+2025-02,Addis Ababa,Immunization Coverage (%),42.0
+2025-02,Addis Ababa,Bed Occupancy Rate (%),75.2
+2025-02,Addis Ababa,Antenatal Care Visits,359.0
+2025-02,Oromia,Immunization Coverage (%),57.7
+2025-02,Oromia,Bed Occupancy Rate (%),52.7
+2025-02,Oromia,Antenatal Care Visits,72.0
+2025-02,Amhara,Immunization Coverage (%),88.5
+2025-02,Amhara,Bed Occupancy Rate (%),70.2
+2025-02,Amhara,Antenatal Care Visits,635.0
+2025-02,Tigray,Immunization Coverage (%),45.6
+2025-02,Tigray,Bed Occupancy Rate (%),61.0
+2025-02,Tigray,Antenatal Care Visits,321.0
+2025-02,SNNPR,Immunization Coverage (%),92.5
+2025-02,SNNPR,Bed Occupancy Rate (%),53.7
+2025-02,SNNPR,Antenatal Care Visits,144.0
+2025-02,Somali,Immunization Coverage (%),63.6
+2025-02,Somali,Bed Occupancy Rate (%),83.3
+2025-02,Somali,Antenatal Care Visits,382.0
+2025-03,Addis Ababa,Immunization Coverage (%),50.2
+2025-03,Addis Ababa,Bed Occupancy Rate (%),75.1
+2025-03,Addis Ababa,Antenatal Care Visits,88.0
+2025-03,Oromia,Immunization Coverage (%),44.6
+2025-03,Oromia,Bed Occupancy Rate (%),94.4
+2025-03,Oromia,Antenatal Care Visits,406.0
+2025-03,Amhara,Immunization Coverage (%),64.6
+2025-03,Amhara,Bed Occupancy Rate (%),91.3
+2025-03,Amhara,Antenatal Care Visits,815.0
+2025-03,Tigray,Immunization Coverage (%),90.1
+2025-03,Tigray,Bed Occupancy Rate (%),77.4
+2025-03,Tigray,Antenatal Care Visits,441.0
+2025-03,SNNPR,Immunization Coverage (%),58.0
+2025-03,SNNPR,Bed Occupancy Rate (%),58.8
+2025-03,SNNPR,Antenatal Care Visits,203.0
+2025-03,Somali,Immunization Coverage (%),69.6
+2025-03,Somali,Bed Occupancy Rate (%),49.0
+2025-03,Somali,Antenatal Care Visits,799.0
+2025-04,Addis Ababa,Immunization Coverage (%),97.3
+2025-04,Addis Ababa,Bed Occupancy Rate (%),53.1
+2025-04,Addis Ababa,Antenatal Care Visits,855.0
+2025-04,Oromia,Immunization Coverage (%),48.7
+2025-04,Oromia,Bed Occupancy Rate (%),44.9
+2025-04,Oromia,Antenatal Care Visits,813.0
+2025-04,Amhara,Immunization Coverage (%),72.3
+2025-04,Amhara,Bed Occupancy Rate (%),45.0
+2025-04,Amhara,Antenatal Care Visits,494.0
+2025-04,Tigray,Immunization Coverage (%),47.7
+2025-04,Tigray,Bed Occupancy Rate (%),68.4
+2025-04,Tigray,Antenatal Care Visits,549.0
+2025-04,SNNPR,Immunization Coverage (%),78.5
+2025-04,SNNPR,Bed Occupancy Rate (%),73.1
+2025-04,SNNPR,Antenatal Care Visits,586.0
+2025-04,Somali,Immunization Coverage (%),54.3
+2025-04,Somali,Bed Occupancy Rate (%),85.8
+2025-04,Somali,Antenatal Care Visits,751.0
+2025-05,Addis Ababa,Immunization Coverage (%),45.3
+2025-05,Addis Ababa,Bed Occupancy Rate (%),65.0
+2025-05,Addis Ababa,Antenatal Care Visits,245.0
+2025-05,Oromia,Immunization Coverage (%),60.3
+2025-05,Oromia,Bed Occupancy Rate (%),41.4
+2025-05,Oromia,Antenatal Care Visits,223.0
+2025-05,Amhara,Immunization Coverage (%),76.4
+2025-05,Amhara,Bed Occupancy Rate (%),76.8
+2025-05,Amhara,Antenatal Care Visits,95.0
+2025-05,Tigray,Immunization Coverage (%),51.8
+2025-05,Tigray,Bed Occupancy Rate (%),49.2
+2025-05,Tigray,Antenatal Care Visits,137.0
+2025-05,SNNPR,Immunization Coverage (%),83.6
+2025-05,SNNPR,Bed Occupancy Rate (%),96.0
+2025-05,SNNPR,Antenatal Care Visits,889.0
+2025-05,Somali,Immunization Coverage (%),40.8
+2025-05,Somali,Bed Occupancy Rate (%),87.5
+2025-05,Somali,Antenatal Care Visits,510.0
+2025-06,Addis Ababa,Immunization Coverage (%),41.3
+2025-06,Addis Ababa,Bed Occupancy Rate (%),83.7
+2025-06,Addis Ababa,Antenatal Care Visits,258.0
+2025-06,Oromia,Immunization Coverage (%),72.4
+2025-06,Oromia,Bed Occupancy Rate (%),83.1
+2025-06,Oromia,Antenatal Care Visits,761.0
+2025-06,Amhara,Immunization Coverage (%),79.4
+2025-06,Amhara,Bed Occupancy Rate (%),74.4
+2025-06,Amhara,Antenatal Care Visits,589.0
+2025-06,Tigray,Immunization Coverage (%),55.1
+2025-06,Tigray,Bed Occupancy Rate (%),56.8
+2025-06,Tigray,Antenatal Care Visits,682.0
+2025-06,SNNPR,Immunization Coverage (%),43.1
+2025-06,SNNPR,Bed Occupancy Rate (%),95.8
+2025-06,SNNPR,Antenatal Care Visits,447.0
+2025-06,Somali,Immunization Coverage (%),56.0
+2025-06,Somali,Bed Occupancy Rate (%),61.3
+2025-06,Somali,Antenatal Care Visits,69.0
+2025-07,Addis Ababa,Immunization Coverage (%),91.2
+2025-07,Addis Ababa,Bed Occupancy Rate (%),53.6
+2025-07,Addis Ababa,Antenatal Care Visits,570.0
+2025-07,Oromia,Immunization Coverage (%),93.3
+2025-07,Oromia,Bed Occupancy Rate (%),91.1
+2025-07,Oromia,Antenatal Care Visits,140.0
+2025-07,Amhara,Immunization Coverage (%),51.7
+2025-07,Amhara,Bed Occupancy Rate (%),73.1
+2025-07,Amhara,Antenatal Care Visits,72.0
+2025-07,Tigray,Immunization Coverage (%),54.6
+2025-07,Tigray,Bed Occupancy Rate (%),58.0
+2025-07,Tigray,Antenatal Care Visits,452.0
+2025-07,SNNPR,Immunization Coverage (%),49.3
+2025-07,SNNPR,Bed Occupancy Rate (%),80.4
+2025-07,SNNPR,Antenatal Care Visits,690.0
+2025-07,Somali,Immunization Coverage (%),53.9
+2025-07,Somali,Bed Occupancy Rate (%),56.3
+2025-07,Somali,Antenatal Care Visits,690.0
+2025-08,Addis Ababa,Immunization Coverage (%),91.8
+2025-08,Addis Ababa,Bed Occupancy Rate (%),95.7
+2025-08,Addis Ababa,Antenatal Care Visits,280.0
+2025-08,Oromia,Immunization Coverage (%),60.2
+2025-08,Oromia,Bed Occupancy Rate (%),78.8
+2025-08,Oromia,Antenatal Care Visits,797.0
+2025-08,Amhara,Immunization Coverage (%),70.7
+2025-08,Amhara,Bed Occupancy Rate (%),76.1
+2025-08,Amhara,Antenatal Care Visits,752.0
+2025-08,Tigray,Immunization Coverage (%),64.6
+2025-08,Tigray,Bed Occupancy Rate (%),49.0
+2025-08,Tigray,Antenatal Care Visits,669.0
+2025-08,SNNPR,Immunization Coverage (%),66.5
+2025-08,SNNPR,Bed Occupancy Rate (%),52.2
+2025-08,SNNPR,Antenatal Care Visits,644.0
+2025-08,Somali,Immunization Coverage (%),80.4
+2025-08,Somali,Bed Occupancy Rate (%),90.9
+2025-08,Somali,Antenatal Care Visits,755.0
+2025-09,Addis Ababa,Immunization Coverage (%),93.0
+2025-09,Addis Ababa,Bed Occupancy Rate (%),65.4
+2025-09,Addis Ababa,Antenatal Care Visits,721.0
+2025-09,Oromia,Immunization Coverage (%),58.7
+2025-09,Oromia,Bed Occupancy Rate (%),71.4
+2025-09,Oromia,Antenatal Care Visits,171.0
+2025-09,Amhara,Immunization Coverage (%),58.7
+2025-09,Amhara,Bed Occupancy Rate (%),82.9
+2025-09,Amhara,Antenatal Care Visits,473.0
+2025-09,Tigray,Immunization Coverage (%),57.9
+2025-09,Tigray,Bed Occupancy Rate (%),95.1
+2025-09,Tigray,Antenatal Care Visits,806.0
+2025-09,SNNPR,Immunization Coverage (%),49.0
+2025-09,SNNPR,Bed Occupancy Rate (%),46.3
+2025-09,SNNPR,Antenatal Care Visits,76.0
+2025-09,Somali,Immunization Coverage (%),76.4
+2025-09,Somali,Bed Occupancy Rate (%),73.5
+2025-09,Somali,Antenatal Care Visits,660.0
+2025-10,Addis Ababa,Immunization Coverage (%),53.6
+2025-10,Addis Ababa,Bed Occupancy Rate (%),61.2
+2025-10,Addis Ababa,Antenatal Care Visits,187.0
+2025-10,Oromia,Immunization Coverage (%),82.0
+2025-10,Oromia,Bed Occupancy Rate (%),50.9
+2025-10,Oromia,Antenatal Care Visits,553.0
+2025-10,Amhara,Immunization Coverage (%),48.1
+2025-10,Amhara,Bed Occupancy Rate (%),53.4
+2025-10,Amhara,Antenatal Care Visits,832.0
+2025-10,Tigray,Immunization Coverage (%),94.6
+2025-10,Tigray,Bed Occupancy Rate (%),53.1
+2025-10,Tigray,Antenatal Care Visits,257.0
+2025-10,SNNPR,Immunization Coverage (%),43.9
+2025-10,SNNPR,Bed Occupancy Rate (%),91.2
+2025-10,SNNPR,Antenatal Care Visits,754.0
+2025-10,Somali,Immunization Coverage (%),91.1
+2025-10,Somali,Bed Occupancy Rate (%),65.2
+2025-10,Somali,Antenatal Care Visits,672.0
+2025-11,Addis Ababa,Immunization Coverage (%),88.6
+2025-11,Addis Ababa,Bed Occupancy Rate (%),63.3
+2025-11,Addis Ababa,Antenatal Care Visits,583.0
+2025-11,Oromia,Immunization Coverage (%),66.6
+2025-11,Oromia,Bed Occupancy Rate (%),91.8
+2025-11,Oromia,Antenatal Care Visits,581.0
+2025-11,Amhara,Immunization Coverage (%),63.3
+2025-11,Amhara,Bed Occupancy Rate (%),42.3
+2025-11,Amhara,Antenatal Care Visits,578.0
+2025-11,Tigray,Immunization Coverage (%),96.8
+2025-11,Tigray,Bed Occupancy Rate (%),57.2
+2025-11,Tigray,Antenatal Care Visits,361.0
+2025-11,SNNPR,Immunization Coverage (%),67.2
+2025-11,SNNPR,Bed Occupancy Rate (%),57.4
+2025-11,SNNPR,Antenatal Care Visits,756.0
+2025-11,Somali,Immunization Coverage (%),93.3
+2025-11,Somali,Bed Occupancy Rate (%),89.0
+2025-11,Somali,Antenatal Care Visits,142.0
+2025-12,Addis Ababa,Immunization Coverage (%),69.5
+2025-12,Addis Ababa,Bed Occupancy Rate (%),85.9
+2025-12,Addis Ababa,Antenatal Care Visits,452.0
+2025-12,Oromia,Immunization Coverage (%),59.1
+2025-12,Oromia,Bed Occupancy Rate (%),50.6
+2025-12,Oromia,Antenatal Care Visits,779.0
+2025-12,Amhara,Immunization Coverage (%),92.1
+2025-12,Amhara,Bed Occupancy Rate (%),54.8
+2025-12,Amhara,Antenatal Care Visits,714.0
+2025-12,Tigray,Immunization Coverage (%),87.0
+2025-12,Tigray,Bed Occupancy Rate (%),83.3
+2025-12,Tigray,Antenatal Care Visits,166.0
+2025-12,SNNPR,Immunization Coverage (%),66.5
+2025-12,SNNPR,Bed Occupancy Rate (%),45.0
+2025-12,SNNPR,Antenatal Care Visits,443.0
+2025-12,Somali,Immunization Coverage (%),86.7
+2025-12,Somali,Bed Occupancy Rate (%),76.1
+2025-12,Somali,Antenatal Care Visits,437.0
