@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.DS_Store
+data/processed/*
+!data/processed/.gitkeep
+.env
+
+# Local backup
+README_backup.md

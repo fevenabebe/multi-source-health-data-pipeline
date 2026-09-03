@@ -1,0 +1,13 @@
+# Keep the Docker build context small and avoid leaking local artifacts
+# into images.
+.git
+.github
+__pycache__
+*.pyc
+.pytest_cache
+.venv
+venv
+data/processed
+*.log
+.DS_Store
+README.md
