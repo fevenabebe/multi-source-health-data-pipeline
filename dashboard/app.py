@@ -4,7 +4,7 @@ dashboard/app.py
 Streamlit dashboard for the Multi-Source Health Data Integration Pipeline.
 
 The ETL pipeline cleans and prepares the data in data/bi/.
-The online Streamlit dashboard reads those BI-ready outputs directly,
+The online Streamlit dashboard reads these BI-ready outputs directly,
 making the demo deployable without a PostgreSQL server.
 
 PostgreSQL remains part of the project's production-oriented ETL architecture.
@@ -16,6 +16,10 @@ import pandas as pd
 import streamlit as st
 
 
+# ---------------------------------------------------------------------------
+# Page configuration
+# ---------------------------------------------------------------------------
+
 st.set_page_config(
     page_title="Multi-Source Health Data Pipeline",
     page_icon="🏥",
@@ -24,19 +28,35 @@ st.set_page_config(
 
 
 # ---------------------------------------------------------------------------
-# Data loading
+# Data paths
 # ---------------------------------------------------------------------------
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 BI_DIR = BASE_DIR / "data" / "bi"
 
 
+# ---------------------------------------------------------------------------
+# Load BI-ready datasets
+# ---------------------------------------------------------------------------
+
 @st.cache_data
 def load_data():
-    facilities = pd.read_csv(BI_DIR / "facilities_clean.csv")
-    patient_visits = pd.read_csv(BI_DIR / "patient_visits_clean.csv")
-    disease_cases = pd.read_csv(BI_DIR / "disease_cases_clean.csv")
-    monthly_indicators = pd.read_csv(BI_DIR / "monthly_indicators_clean.csv")
+    facilities = pd.read_csv(
+        BI_DIR / "facilities_clean.csv"
+    )
+
+    patient_visits = pd.read_csv(
+        BI_DIR / "patient_visits_clean.csv"
+    )
+
+    disease_cases = pd.read_csv(
+        BI_DIR / "disease_cases_clean.csv"
+    )
+
+    monthly_indicators = pd.read_csv(
+        BI_DIR / "monthly_indicators_clean.csv"
+    )
+
     visit_disease_summary = pd.read_csv(
         BI_DIR / "visit_disease_summary_clean.csv"
     )
@@ -83,7 +103,7 @@ st.caption(
 
 
 # ---------------------------------------------------------------------------
-# KPI row
+# KPI cards
 # ---------------------------------------------------------------------------
 
 col1, col2, col3, col4 = st.columns(4)
@@ -103,14 +123,26 @@ col3.metric(
     len(disease_cases),
 )
 
+
+# Determine latest month
+latest_month = None
+
 if "case_month" in visit_disease_summary.columns:
-    latest_month = visit_disease_summary["case_month"].dropna().max()
-else:
-    latest_month = "N/A"
+    months = visit_disease_summary["case_month"].dropna()
+
+    if not months.empty:
+        latest_month = months.max()
+
+if latest_month is None and "month" in monthly_indicators.columns:
+    months = monthly_indicators["month"].dropna()
+
+    if not months.empty:
+        latest_month = months.max()
+
 
 col4.metric(
     "Latest Data Month",
-    latest_month if pd.notna(latest_month) else "N/A",
+    latest_month if latest_month is not None else "N/A",
 )
 
 
@@ -121,86 +153,143 @@ st.divider()
 # Monthly trends
 # ---------------------------------------------------------------------------
 
-st.subheader("Monthly Patient Visit Trend")
+st.subheader("Monthly Trends")
 
-if "visit_date" in patient_visits.columns:
-    patient_visits["visit_month"] = pd.to_datetime(
-        patient_visits["visit_date"],
-        errors="coerce",
-    ).dt.to_period("M").astype(str)
-
-    visit_trend = (
-        patient_visits.dropna(subset=["visit_month"])
-        .groupby("visit_month")
-        .size()
-        .reset_index(name="visit_count")
-    )
-
-    visit_trend = visit_trend.sort_values("visit_month")
-
-    st.line_chart(
-        visit_trend.set_index("visit_month")["visit_count"]
-    )
+trend_left, trend_right = st.columns(2)
 
 
-st.subheader("Monthly Disease Case Trend")
+# Patient visit trend
+with trend_left:
 
-if {"case_month", "case_count"}.issubset(visit_disease_summary.columns):
-    case_trend = (
-        visit_disease_summary.groupby("case_month", as_index=False)[
-            "case_count"
-        ]
-        .sum()
-        .sort_values("case_month")
-    )
+    st.markdown("**Patient Visits Over Time**")
 
-    st.line_chart(
-        case_trend.set_index("case_month")["case_count"]
-    )
+    if "visit_date" in patient_visits.columns:
+
+        visits = patient_visits.copy()
+
+        visits["visit_date"] = pd.to_datetime(
+            visits["visit_date"],
+            errors="coerce",
+        )
+
+        visits = visits.dropna(subset=["visit_date"])
+
+        visits["visit_month"] = (
+            visits["visit_date"]
+            .dt.to_period("M")
+            .astype(str)
+        )
+
+        visit_trend = (
+            visits.groupby("visit_month")
+            .size()
+            .reset_index(name="visit_count")
+            .sort_values("visit_month")
+        )
+
+        st.line_chart(
+            visit_trend.set_index("visit_month")[
+                "visit_count"
+            ]
+        )
+
+
+# Disease case trend
+with trend_right:
+
+    st.markdown("**Disease Cases Over Time**")
+
+    if {
+        "case_month",
+        "case_count",
+    }.issubset(visit_disease_summary.columns):
+
+        case_trend = (
+            visit_disease_summary
+            .groupby("case_month", as_index=False)[
+                "case_count"
+            ]
+            .sum()
+            .sort_values("case_month")
+        )
+
+        st.line_chart(
+            case_trend.set_index("case_month")[
+                "case_count"
+            ]
+        )
 
 
 st.divider()
 
 
 # ---------------------------------------------------------------------------
-# Regional + disease breakdowns
+# Regional and disease analysis
 # ---------------------------------------------------------------------------
 
-left, right = st.columns(2)
+st.subheader("Regional & Disease Analysis")
+
+region_col, disease_col = st.columns(2)
 
 
-with left:
-    st.subheader("Visits by Region")
+# Visits by region
+with region_col:
+
+    st.markdown("**Visits by Region**")
 
     if "region" in patient_visits.columns:
+
         by_region = (
-            patient_visits.groupby("region")
+            patient_visits
+            .groupby("region")
             .size()
             .reset_index(name="visit_count")
-            .sort_values("visit_count", ascending=False)
+            .sort_values(
+                "visit_count",
+                ascending=False,
+            )
         )
 
         st.bar_chart(
-            by_region.set_index("region")["visit_count"]
+            by_region.set_index("region")[
+                "visit_count"
+            ]
+        )
+
+        st.dataframe(
+            by_region,
+            use_container_width=True,
+            hide_index=True,
         )
 
 
-with right:
-    st.subheader("Cases by Disease")
+# Cases by disease
+with disease_col:
 
-    if {"disease_name", "case_count"}.issubset(
-        visit_disease_summary.columns
-    ):
+    st.markdown("**Cases by Disease**")
+
+    if {
+        "disease_name",
+        "case_count",
+    }.issubset(visit_disease_summary.columns):
+
         by_disease = (
-            visit_disease_summary.groupby("disease_name", as_index=False)[
+            visit_disease_summary
+            .groupby(
+                "disease_name",
+                as_index=False,
+            )["case_count"]
+            .sum()
+            .sort_values(
+                "case_count",
+                ascending=False,
+            )
+        )
+
+        st.bar_chart(
+            by_disease.set_index("disease_name")[
                 "case_count"
             ]
-            .sum()
-            .sort_values("case_count", ascending=False)
-        )
-
-        st.bar_chart(
-            by_disease.set_index("disease_name")["case_count"]
         )
 
         st.dataframe(
@@ -214,35 +303,82 @@ st.divider()
 
 
 # ---------------------------------------------------------------------------
-# Top facilities + age breakdown
+# Facility and age analysis
 # ---------------------------------------------------------------------------
 
-left2, right2 = st.columns(2)
+st.subheader("Facility & Demographic Analysis")
+
+facility_col, age_col = st.columns(2)
 
 
-with left2:
-    st.subheader("Top Facilities by Visit Count")
+# Top facilities
+with facility_col:
+
+    st.markdown("**Top Facilities by Visit Count**")
 
     if "facility_id" in patient_visits.columns:
+
         top_facilities = (
-            patient_visits.groupby("facility_id")
+            patient_visits
+            .groupby("facility_id")
             .size()
             .reset_index(name="visit_count")
-            .sort_values("visit_count", ascending=False)
+            .sort_values(
+                "visit_count",
+                ascending=False,
+            )
             .head(10)
         )
 
-        if "facility_name" in facilities.columns:
+        # Add facility names
+        if {
+            "facility_id",
+            "facility_name",
+        }.issubset(facilities.columns):
+
             top_facilities = top_facilities.merge(
-                facilities[["facility_id", "facility_name"]],
+                facilities[
+                    [
+                        "facility_id",
+                        "facility_name",
+                    ]
+                ],
                 on="facility_id",
                 how="left",
             )
 
             top_facilities = top_facilities[
-                ["facility_id", "facility_name", "visit_count"]
+                [
+                    "facility_id",
+                    "facility_name",
+                    "visit_count",
+                ]
             ]
 
+        # Bar chart
+        chart_data = top_facilities.copy()
+
+        if "facility_name" in chart_data.columns:
+
+            chart_data = chart_data.set_index(
+                "facility_name"
+            )
+
+            st.bar_chart(
+                chart_data["visit_count"]
+            )
+
+        else:
+
+            chart_data = chart_data.set_index(
+                "facility_id"
+            )
+
+            st.bar_chart(
+                chart_data["visit_count"]
+            )
+
+        # Detailed table
         st.dataframe(
             top_facilities,
             use_container_width=True,
@@ -250,12 +386,16 @@ with left2:
         )
 
 
-with right2:
-    st.subheader("Visits by Age Group")
+# Age group
+with age_col:
+
+    st.markdown("**Visits by Age Group**")
 
     if "age_group" in patient_visits.columns:
+
         age_breakdown = (
-            patient_visits.dropna(subset=["age_group"])
+            patient_visits
+            .dropna(subset=["age_group"])
             .groupby("age_group")
             .size()
             .reset_index(name="visit_count")
@@ -263,7 +403,15 @@ with right2:
         )
 
         st.bar_chart(
-            age_breakdown.set_index("age_group")["visit_count"]
+            age_breakdown.set_index("age_group")[
+                "visit_count"
+            ]
+        )
+
+        st.dataframe(
+            age_breakdown,
+            use_container_width=True,
+            hide_index=True,
         )
 
 
@@ -276,7 +424,14 @@ st.divider()
 
 st.subheader("Monthly Indicators — Latest Value per Region")
 
-if {"region", "indicator_name", "month", "indicator_value"}.issubset(
+required_indicator_columns = {
+    "region",
+    "indicator_name",
+    "month",
+    "indicator_value",
+}
+
+if required_indicator_columns.issubset(
     monthly_indicators.columns
 ):
 
@@ -287,13 +442,26 @@ if {"region", "indicator_name", "month", "indicator_value"}.issubset(
         errors="coerce",
     )
 
+    indicators = indicators.dropna(
+        subset=["month"]
+    )
+
     latest_indicators = (
-        indicators.sort_values("month")
+        indicators
+        .sort_values("month")
         .drop_duplicates(
-            subset=["region", "indicator_name"],
+            subset=[
+                "region",
+                "indicator_name",
+            ],
             keep="last",
         )
-        .sort_values(["region", "indicator_name"])
+        .sort_values(
+            [
+                "region",
+                "indicator_name",
+            ]
+        )
     )
 
     latest_indicators["month"] = (
@@ -309,7 +477,7 @@ if {"region", "indicator_name", "month", "indicator_value"}.issubset(
 
 
 # ---------------------------------------------------------------------------
-# Data quality / pipeline summary
+# Pipeline output summary
 # ---------------------------------------------------------------------------
 
 st.divider()
@@ -341,6 +509,10 @@ st.dataframe(
     hide_index=True,
 )
 
+
+# ---------------------------------------------------------------------------
+# Footer
+# ---------------------------------------------------------------------------
 
 st.caption(
     "Data source: synthetic CSV files generated by "
