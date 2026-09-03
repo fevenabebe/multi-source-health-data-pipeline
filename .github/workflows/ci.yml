@@ -1,0 +1,86 @@
+# .github/workflows/ci.yml
+# ----------------------------------------------------------------------
+# A small Continuous Integration workflow. It answers one question on
+# every push/PR: "does this code still work?" — nothing more elaborate.
+#
+# What it does, step by step:
+#   1. Checks out the repo.
+#   2. Installs Python + dependencies.
+#   3. Spins up a real PostgreSQL service container (GitHub Actions can
+#      run "service containers" alongside the job, which is how we test
+#      against a real database without deploying anything).
+#   4. Generates the synthetic datasets (so CI doesn't depend on any
+#      pre-existing data files being committed).
+#   5. Runs the pytest suite (tests the pure transform logic).
+#   6. Runs the full ETL pipeline against the service-container database,
+#      proving extract -> transform -> load actually works end to end,
+#      not just that the unit tests pass in isolation.
+#   7. Confirms the Docker image builds successfully (a "does it build"
+#      smoke check, not a full docker-compose run, to keep CI fast).
+#
+# This is intentionally NOT a deployment pipeline — it has no "deploy"
+# step, no cloud credentials, and does not publish anything. It only
+# validates the code, per the project brief's "keep CI/CD simple"
+# requirement.
+# ----------------------------------------------------------------------
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: health_pipeline
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        # Wait for Postgres to actually be ready before the job's steps
+        # run, the same way docker-compose's healthcheck does locally.
+        options: >-
+          --health-cmd "pg_isready -U postgres"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+
+    env:
+      DB_HOST: localhost
+      DB_PORT: 5432
+      DB_NAME: health_pipeline
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Generate synthetic datasets
+        run: python src/generate_data.py
+
+      - name: Run unit tests (transform logic)
+        run: pytest tests/ -v
+
+      - name: Run the full ETL pipeline against the service-container database
+        run: python src/pipeline.py
+
+      - name: Build the Docker image (smoke check only)
+        run: docker build -t health-pipeline:ci .
