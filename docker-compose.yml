@@ -1,0 +1,75 @@
+# docker-compose.yml
+# ----------------------------------------------------------------------
+# Brings up 3 containers that together form the whole system:
+#   db        - PostgreSQL, the target data warehouse
+#   pipeline  - runs extract -> transform -> load ONCE, then exits
+#   dashboard - Streamlit app, runs continuously, reads from `db`
+#
+# How the containers talk to each other:
+#   Compose puts all 3 services on one private Docker network
+#   (created automatically). Within that network, containers reach each
+#   other by SERVICE NAME as if it were a hostname — that's why
+#   DB_HOST=db below works even though there's no literal machine named
+#   "db"; Docker's internal DNS resolves it to the db container's IP.
+#   This is also why load.py / app.py never hardcode "localhost" — inside
+#   a container, "localhost" means the container itself, not the
+#   database container.
+#
+# Startup order:
+#   `depends_on: condition: service_healthy` makes `pipeline` wait until
+#   Postgres reports healthy (see the healthcheck below) before it starts,
+#   and `dashboard` wait until `pipeline` has finished successfully
+#   (condition: service_completed_successfully) so it never queries an
+#   empty database.
+# ----------------------------------------------------------------------
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: health_pipeline_db
+    environment:
+      POSTGRES_DB: health_pipeline
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"          # exposed to the host too, so you can psql in from outside Docker
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d health_pipeline"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  pipeline:
+    build: .
+    container_name: health_pipeline_etl
+    command: ["python", "src/pipeline.py"]
+    environment:
+      DB_HOST: db               # service name, resolved via Docker's internal DNS
+      DB_PORT: "5432"
+      DB_NAME: health_pipeline
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    depends_on:
+      db:
+        condition: service_healthy
+
+  dashboard:
+    build: .
+    container_name: health_pipeline_dashboard
+    command: ["streamlit", "run", "dashboard/app.py",
+              "--server.address=0.0.0.0", "--server.port=8501"]
+    environment:
+      DB_HOST: db
+      DB_PORT: "5432"
+      DB_NAME: health_pipeline
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    ports:
+      - "8501:8501"
+    depends_on:
+      pipeline:
+        condition: service_completed_successfully
+
+volumes:
+  pgdata:      # named volume so Postgres data survives `docker compose down` (not `-v`)
